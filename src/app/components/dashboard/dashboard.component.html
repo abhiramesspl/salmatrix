@@ -1,0 +1,71 @@
+<!-- Toolbar -->
+<mat-toolbar class="app-header">
+    <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
+    <div fxLayout fxLayout.xs="column" class="wid15p">
+        <div fxFlex="70%">
+            <mat-form-field >
+                <mat-select [(value)]="selected">
+                    <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
+                </mat-select>
+            </mat-form-field>  
+        </div>
+       <div fxFlex="50%" align="right" class="logoutCon">
+            <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>
+       </div> 
+    </div>
+</mat-toolbar>
+
+<div class="dashboard-wrapper" fxLayout fxLayout.xs="column">
+    <div fxFlex="50%">
+        <div class="custom-card greycolorbx">
+            <h3>Guidance :</h3>
+            <p>
+                This is a ready-to-use salary matrix.This tool will help you collect information of current wage to compare to living wage .The data you should have available includes the following: 
+            </p>
+            <ul>
+                <li>Producer Information: Location, production, season timing.</li>
+                <li>In-kind Benefits: amount spent by producer to provide in-kind benefits,number of workers who receives in-kind benefits.</li>
+                <li>Wages and bonuses: Seasonal unit and rate at which each job category is paid and average bonus amount per job category</li>
+            </ul>
+            <p>
+                Questions?Please email livingwagematrix@idhtrade.com
+            </p>
+            
+        </div>
+        <button mat-stroked-button color="primary" class="btn-block">Create New Matrix</button>
+    </div>
+    <div fxFlex="50%">
+        <div fxLayout fxLayout.xs="column">
+            <div fxFlex="50%">
+                <div class="custom-card blcolorbx">
+                    <h3>Check : </h3>
+                    Blue Boxes indicates comments that will assist you in entering the correct data. 
+                </div>
+                <div class="custom-card grcolorbx">
+                    <h3>Definition : </h3>
+                    Green boxes indicates definitions
+                </div>
+                
+            </div>
+            <div fxFlex="50%">
+                <div class="custom-card greycolorbx">
+                    <h3>Example : </h3>
+                    This example contains a 100 person bananna firm in honduras.
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+<mat-toolbar class="app-footer">
+    <div fxLayout fxLayout.xs="column" class="wd100">
+        <div fxFlex="70%">
+            Copyright © 2020 IDH. All Rights Reserved
+        </div>
+       <div fxFlex="30%" align="right">
+            Salary Matrix V 0.3
+       </div> 
+    </div>
+</mat-toolbar>
