@@ -1,2 +1,15 @@
 mat-toolbar mat-form-field{width: 75px;}
 mat-select{color: #fff;}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }

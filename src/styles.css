@@ -1,9 +1,78 @@
+/*@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';*/
+@font-face{
+    font-family: GothamBook;
+    src: url(assets/fonts/GothamBook.ttf) ;
+}
+@font-face{
+    font-family: GothamMedium;
+    src: url(assets/fonts/GothamMedium.ttf) ;
+}
 html,body{height:100%;margin:0;padding:0;}
-body{font-family:'Roboto', sans-serif;}
+body{font-family:GothamBook !important;}
 .app-header{justify-content:space-between;position:fixed;top:0;left:0;right:0;z-index:2;box-shadow:0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);background-color: #0072c6;}
-.login-wrapper{background:linear-gradient(0deg, rgba(0, 126, 255, 0.3), rgba(63, 0, 255, 0.3)),url(assets/images/bg.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;height: 100%;}
+/*.login-wrapper{background:linear-gradient(0deg, rgba(0, 126, 255, 0.3), rgba(63, 0, 255, 0.3)),url(assets/images/bg.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;height: 100%;}
+*/
+/*------------------New Design Changes------------------*/
+.login-wrapper{width: 100%;
+    margin: 0 auto;
+    height: 100%;}
+.loginImage img{     width: 55%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+    .mat-form-field-appearance-outline:hover .mat-form-field-outline:hover{color:#d3d3d3 !important}
+.loginImage{width: 42%;
+    height: 100%;
+    background: #0071C4;
+    box-shadow: 3px 2px 20px 6px rgba(36, 77, 162, 0.15);
+position:relative}
+.box{padding: 1rem 7rem;
+    width: 42%;}
+
+body .mat-form-field{font-family:GothamBook !important;}
+.login-wrapper .CaptchaInput1, .login-wrapper .CaptchaInput2{text-align: center;
+    color: #8a8a8a;
+    font-weight: 600;
+    /* line-height: 10px; */
+    padding: 0;
+    margin: 0;}
+.loginInput .mat-form-field-appearance-outline .mat-form-field-outline,
+.loginInput .mat-form-field-infix,
+.loginInput .mat-form-field{    width: 100%;
+    
+    letter-spacing: 0.35px;
+ }
+    
+    .mat-form-field-empty.mat-form-field-label {
+        display: block;    
+    }
+    .logintext{padding-bottom: 2rem;
+        display: block;
+        text-transform: capitalize;
+        color: #0071c4;}
+        .newUser p{text-align: center;
+            color: #333;
+            font-weight: 400;
+            letter-spacing: 0.25px;}
+            .newUser a{font-weight: 600;
+                padding-left: 0.75rem;
+                color: #0072c6;}
+                .aboutTool .custom-card{width:100%}
+                .wid30p{width:30%}
+                .lang .mat-select-value-text{letter-spacing: 0.75px; font-size: 0.875rem;}
+                .help{color: #fff;
+                    top: 1.15rem;
+                    position: relative;}
+                    .SalaryMatrix_tbl{margin:0 auto;}
+/*----------------New Design Changes End-----------------*/
+
 .logo{text-decoration:none;color:#ffffff;}
-.box{position:relative;top:0;opacity:1;float:left;padding:15px 50px 40px 50px;width:100%;background:#fff;border-radius:10px;transform:scale(1);-webkit-transform:scale(1);-ms-transform:scale(1);z-index:5;max-width:330px;}
+/*.box{position:relative;top:0;opacity:1;float:left;padding:15px 50px 40px 50px;width:100%;background:#fff;border-radius:10px;transform:scale(1);-webkit-transform:scale(1);-ms-transform:scale(1);z-index:5;max-width:330px;}*/
 .box.back{transform:scale(.95);-webkit-transform:scale(.95);-ms-transform:scale(.95);top:-20px;opacity:.8;z-index:-1;}
 .box:before{content:"";width:100%;height:30px;border-radius:10px;position:absolute;top:-10px;background:rgba(255, 255, 255, .6);left:0;transform:scale(.95);-webkit-transform:scale(.95);-ms-transform:scale(.95);z-index:-1;}
 .login-wrapper .example-form{min-width:100%;max-width:300px;width:100%;}
@@ -13,23 +82,46 @@ body{font-family:'Roboto', sans-serif;}
 .login-wrapper mat-card-header div{border-bottom: 2px solid #0072c6;}
 .login-wrapper mat-card-header mat-card-title{font-size:30px;margin:0;}
 .login-wrapper .mat-card{padding:40px 70px 50px;}
-.login-wrapper .mat-stroked-button{border:1px solid currentColor;line-height:54px;background:#0072c6;color: #fff;}
+.login-wrapper .mat-raised-button.primary{line-height:40px;background:#0072c6;color: #fff;font-size: 1rem;
+    letter-spacing: 0.75px;}
+    .primary{line-height:40px;background:#0072c6;color: #fff;font-size: 1rem;
+        letter-spacing: 0.75px;}
+        .basic{line-height:40px;background:#fff;color: rgb(100, 100, 100);font-size: 1rem;
+            letter-spacing: 0.75px;}
+    .login-wrapper .mat-raised-button.basic{line-height:40px;background:#fff;color: rgb(100, 100, 100);font-size: 1rem;
+        letter-spacing: 0.75px;}
 .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix{padding:0.8375em 0;}
-.symbols{position:relative;top:30px;}
-.fgpass{position: relative;top: 20px;color:#0072c6;font-weight: 400;}
-.fgpass:hover{color: #59819e;}
+.symbols{position: relative;
+    top: 20px;
+    font-size: 1.35rem;
+    color: #7b7b7b;}
+.fgpass{    position: relative;
+     top: 0.75rem;
+    color: #0072c6;
+    font-weight: 600;
+    text-decoration: none;}
+    .floatRight{float:right}
+
 .login-wrapper .mat-stroked-button:hover{background: #59819e}
-mat-card-footer div{margin-top:30px;padding-top:10px;border-top:2px solid #0072c6;}
-mat-card-footer div a{text-decoration: none;font-weight: 400;}
+.newUser{margin-top:2.75rem;padding-top:1rem;}
+.newUser a{text-decoration: none;font-weight: 400;}
 .nav-tool-items a{text-decoration: none;}
-.logoutBtn{background: #fff;color:#000;padding: 10px;border-radius: 100%;position: relative;top: 25px;}
+.logoutBtn{background: #fff;
+    color: #000;
+    padding: 8px;
+    border-radius: 100%;
+    position: relative;
+    top: 0.67rem;}
+    .newMatrixBtn{position: relative;
+        top: 0.65rem;}
 .logoutBtn mat-icon{position: relative;top: 5px;}
 .logoutBtn:hover{background: #ccc;}
 .wid15p{width: 15%;}
 .app-header .mat-form-field-underline{background-color:#fff!important;}
 .app-footer{justify-content:space-between;position:fixed;bottom:0;left:0;right:0;z-index:2;box-shadow:0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);background-color: #0072c6;color: #fff;font-weight: 400;font-size: 1rem;}
 .wd100{width: 100%;}
-.dashboard-wrapper{width: 95%;margin: 5% auto;}
+.dashboard-wrapper{width: 94%;
+    margin: 4rem auto 00;}
 .custom-card {width: 90%;padding: 10px;margin: 10px 0px;border-radius: 10px;text-align: justify;}
 .custom-card h3{font-size: 1rem;font-weight: 500;margin-bottom: 0px;}
 .blcolorbx{background: rgba(161, 222, 251, 0.94);color: #000;}

@@ -1,68 +1,69 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="loginImage">
+        <img mat-card-image src="assets/images/IDH_logo_liggend_WHITE.png" alt="logo">
+    </mat-card>
 
     <mat-card class="box">
         <mat-card-header>
-            <mat-card-title>
-                <div>
-                    <img src="assets/images/login-logo.png" alt="image" width="100" height="75">
-                </div>
-                <mat-label>Sign In</mat-label>
+            <mat-card-title class="logintext">
+                Sign In
             </mat-card-title>
 
         </mat-card-header>
-
         <form class="example-form">
             <mat-card-content>
-
-                <mat-form-field class="example-full-width">
-                    <mat-label>Enter your Email</mat-label>
-                    <input matInput type="text">
-                </mat-form-field>
-
-                <mat-form-field class="example-full-width">
-                    <mat-label>Enter your password</mat-label>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
-                </mat-form-field>
+                  </mat-form-field>
+                </div>
+
                 <div fxLayout fxLayout.xs="column">
-                    <mat-form-field fxFlex="20%">
-                        <input matInput type="text" class="font2rem" readonly [(ngModel)]="number1" name="number1">
+                    <mat-form-field appearance="outline" fxFlex="20%">
+                        <input matInput type="text" class="CaptchaInput1" readonly [(ngModel)]="number1" name="number1">
                     </mat-form-field>
                     <div fxFlex="10%" align="center">
                         <span class="symbols">+</span>
                     </div>
-                    <mat-form-field fxFlex="20%">
-                        <input matInput type="text" class="font2rem" readonly [(ngModel)]="number2" name="number2">
+                    <mat-form-field appearance="outline" fxFlex="20%">
+                        <input matInput type="text" class="CaptchaInput2" readonly [(ngModel)]="number2" name="number2">
                     </mat-form-field>
                     <div fxFlex="10%"  align="center">
                         <span class="symbols">=</span>
                     </div>
                     <div fxFlex="10%"><mat-icon class="symbols refreshBtn" (click)="refreshCaptcha()">refresh</mat-icon></div>
-                    <mat-form-field fxFlex="30%" fxFlexOrder="3">
+                    <mat-form-field fxFlex="30%" appearance="outline" fxFlexOrder="3">
                         <mat-label>Answer</mat-label>
-                        <input matInput type="text" class="font2rem">
+                        <input matInput type="text" class="CaptchaResult">
                     </mat-form-field>
                 </div>
 
 
             </mat-card-content>
             <div fxLayout fxLayout.xs="column">
-                <div fxFlex="50%">
-                    <a routerLink="/fpassword" class="fgpass">Forgot Password ?</a>
+                <div fxFlex="80%">
+                    <a routerLink="/fpassword" class="fgpass">Forgot Password</a>
                 </div>
-                <div fxFlex="50%">
-                    <button mat-stroked-button color="primary" class="btn-block" (click)="login()">Sign In</button>
+                <div fxFlex="20%">
+                    <button mat-raised-button  class="btn-block primary" (click)="login()">Sign In</button>
                 </div>
             </div>
             
         </form>
 
         <mat-card-footer>
-            <div>
-                <a routerLink="/register" routerLinkActive="active">New User</a>
+            <div class="newUser">
+                <p>Don't have an account yet? <a routerLink="/register" routerLinkActive="active">Sign Up</a></p>
             </div>
         </mat-card-footer>
     </mat-card>

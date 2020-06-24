@@ -1,60 +1,74 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="loginImage">
+        <img mat-card-image src="assets/images/IDH_logo_liggend_WHITE.png" alt="logo">
+    </mat-card>
 
     <mat-card class="box">
         <mat-card-header>
-            <mat-card-title>
-                <div>
-                    <img src="assets/images/login-logo.png" alt="image" width="100" height="75">
-                </div>
-                <mat-label>Sign Up</mat-label>
+            <mat-card-title class="logintext">
+               Register
             </mat-card-title>
 
         </mat-card-header>
 
         <form class="example-form">
             <mat-card-content>
-
-                <mat-form-field class="example-full-width">
-                    <mat-label>Full Name</mat-label>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
                     <input matInput type="text">
                 </mat-form-field>
-
-                <mat-form-field class="example-full-width">
-                    <mat-label>Organization</mat-label>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
                     <input matInput type="text">
                 </mat-form-field>
+            </div>
 
-                <mat-form-field class="example-full-width">
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
                     <input matInput type="text">
                 </mat-form-field>
-
-                <mat-form-field class="example-full-width">
-                    <mat-label>Enter your password</mat-label>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
                 </mat-form-field>
-
-                <mat-form-field class="example-full-width">
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
                     <mat-label>Confirm Password</mat-label>
                     <input matInput type="password">
                 </mat-form-field>
+                </div>
 
             </mat-card-content>
-            <div fxLayout fxLayout.xs="column">
-                <div fxFlex="100%">
-                    <button mat-stroked-button color="primary" class="btn-block">Sign Up</button>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" >Cancel</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary">Submit</button>
                 </div>
             </div>
             
         </form>
 
         <mat-card-footer>
-            <div>
-                <a routerLink="/login" routerLinkActive="active">Already have an account ? Login to your account</a>
+            <div class="newUser">
+                <p>Already have an account? <a routerLink="/login" routerLinkActive="active">Sign In</a></p>
             </div>
         </mat-card-footer>
     </mat-card>
