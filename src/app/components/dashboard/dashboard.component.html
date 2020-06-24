@@ -3,18 +3,18 @@
 <!-- Toolbar -->
 <mat-toolbar class="app-header">
     <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
-    <div fxLayout fxLayout.xs="column" class="wid30p">
-        <div fxFlex="30%" class="lang">
+    <div fxLayout fxLayout.xs="column" class="wid25p">
+        <div fxFlex="40%" class="lang">
             <mat-form-field >
                 <mat-select [(value)]="selected">
                     <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
                 </mat-select>
             </mat-form-field>  
         </div>
-        <div fxFlex="45%" class="help">
+        <div fxFlex="20%" class="help">
             <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
          </div>
-        <div fxFlex="25%" class="newMatrixBtn">
+        <div fxFlex="40%" class="newMatrixBtn">
            <div class="profileImage">
                <img src="assets/images/profileBran.png">
            </div>
@@ -42,7 +42,7 @@
         <div class="dashboard-wrapper aboutTool" fxLayout fxLayout.xs="flex">
             <div fxFlex="100%">
                 <div class="custom-card">
-                    <h3>Guidance :</h3>
+                    <h3>Guidance  <mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon></h3>
         
                
         
@@ -70,8 +70,14 @@
             <div fxFlex="94%" class="SalaryMatrix_tbl">       
                 <div fxLayout fxLayout.xs="column" class="topBtn"> 
                 <div fxFlex="50%">
-                    <div fxFlex="14%"> <button mat-raised-button>Draft</button></div>
-                    <div fxFlex="14%"> <button mat-raised-button >Created</button></div>
+                    <label class="toggleSwitch nolabel" onclick="">
+                        <input type="checkbox" checked />
+                        <span>
+                            <span>Draft</span>
+                            <span>Created</span>
+                        </span>
+                        <a></a>
+                    </label>
                 </div>
                 <div fxFlex="50%">
                   <a mat-raised-button href="#" color="primary" class="newMtx text-right">Create New Matrix</a>
