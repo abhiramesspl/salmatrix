@@ -62,7 +62,12 @@ body .mat-form-field{font-family:GothamBook !important;}
             .newUser a{font-weight: 600;
                 padding-left: 0.75rem;
                 color: #0072c6;}
-                .aboutTool .custom-card{width:100%}
+                .aboutTool .custom-card{width: 95%;
+                    background: #e1edff;
+                    padding: 1.75rem 1.75rem;
+                    color: #000;
+                    margin: 1rem 0px 2.25rem;
+                    line-height: 1.35rem;}
                 .wid30p{width:30%}
                 .lang .mat-select-value-text{letter-spacing: 0.75px; font-size: 0.875rem;}
                 .help{color: #fff;
@@ -82,6 +87,38 @@ body .mat-form-field{font-family:GothamBook !important;}
 .login-wrapper mat-card-header div{border-bottom: 2px solid #0072c6;}
 .login-wrapper mat-card-header mat-card-title{font-size:30px;margin:0;}
 .login-wrapper .mat-card{padding:40px 70px 50px;}
+.topBtn{position: relative; top:-1rem}
+.SalaryMatrix_tbl .text-right{text-align:right !important; float:right}
+.SalaryMatrix_tbl .newMtx{background:#0072c6;}
+.profileImage img{width: 40px;
+    border-radius: 100%;
+    border: 1px solid #0072c6;}
+    .profileImage{width:auto;float:left}
+    .sidenavBar .activemenu{background: #142e54 !important;}
+    .sidenavBar{background: #0081e0;
+        top: 4rem;
+        position: relative;}
+    .sidenavBar .mat-list-item{color: #fff;
+        font-size: 0.875rem;
+        font-family: GothamBook;
+        letter-spacing: 0.25px;
+        font-weight: 500;}
+    .profileName{    width: auto;
+        float: left;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 400;
+        letter-spacing: 0.75px;
+        top: 0.25rem;
+        position: relative;
+        left: 1rem;}
+.viewMore{padding: 1rem 2rem;
+    text-align: right;}
+    .viewMore a{color: #0072c6;
+        text-decoration: none;
+        font-weight: 600;}
+td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
+.dnone{display:none !important;}
 .login-wrapper .mat-raised-button.primary{line-height:40px;background:#0072c6;color: #fff;font-size: 1rem;
     letter-spacing: 0.75px;}
     .primary{line-height:40px;background:#0072c6;color: #fff;font-size: 1rem;

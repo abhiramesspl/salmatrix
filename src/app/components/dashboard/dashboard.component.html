@@ -1,3 +1,5 @@
+
+
 <!-- Toolbar -->
 <mat-toolbar class="app-header">
     <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
@@ -9,110 +11,136 @@
                 </mat-select>
             </mat-form-field>  
         </div>
-        <div fxFlex="45%" class="newMatrixBtn">
-            <a mat-raised-button href="#">Create New Matrix</a>
+        <div fxFlex="45%" class="help">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
+         </div>
+        <div fxFlex="25%" class="newMatrixBtn">
+           <div class="profileImage">
+               <img src="assets/images/profileBran.png">
+           </div>
+           <div class="profileName">Hi Bran
+           </div>
         </div>
-        <div fxFlex="10%" class="help">
-           <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
-        </div>
+
        <div fxFlex="15%" align="right" class="logoutCon">
-            <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>
+           <!-- <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>-->
        </div> 
     </div>
 </mat-toolbar>
 
-<div class="dashboard-wrapper aboutTool" fxLayout fxLayout.xs="flex">
-    <div fxFlex="100%">
-        <div class="custom-card">
-            <h3>Guidance :</h3>
-            <mat-card class="example-card">This is a ready-to-use Salary Matrix. This tool will help you collect information on current wages to compare to a living wage.
-
-                The data you should have available includes the following:
-                
-                <strong>Facility information :</strong> Location, production and season timing.
-                <strong>Job Categories:</strong> List of work areas, all job categories, and number of men and women in each job category.
-                
-                <strong>Wages and bonuses:</strong> Seasonal unit and rate at which each job category is paid and average bonus amount per job category in gross value.
-                
-                <strong>In-kind benefits:</strong>amount spent by company to provide in-king benefits, number of workers who receive in-kind benefits.
-                
-                In addition to the results provided in this Salary Matrix, IDH offers to visualize your results 
-                as shown on the final tab. For questions, please email IDH at:
-                
-                <strong>livingwagematrix@idhtrade.org</strong></mat-card>
+<div fxLayout fxLayout.xs="column">
+    <div fxFlex="15%" class="sidenavBar">
+        <mat-list role="list">
+            <mat-list-item role="listitem" class="activemenu">Supplier Dashboard</mat-list-item>
+            <mat-list-item role="listitem">Matrices</mat-list-item>
+            <mat-list-item role="listitem">Reports</mat-list-item>
+            <mat-list-item role="listitem">Configuration</mat-list-item>
+            <mat-list-item role="listitem">Help</mat-list-item>
+          </mat-list>
+    </div>
+    <div fxFlex="85%">
+        <div class="dashboard-wrapper aboutTool" fxLayout fxLayout.xs="flex">
+            <div fxFlex="100%">
+                <div class="custom-card">
+                    <h3>Guidance :</h3>
+        
+               
+        
+                    <mat-card class="example-card">This is a ready-to-use Salary Matrix. This tool will help you collect information on current wages to compare to a living wage.
+        
+                        The data you should have available includes the following:
+                        
+                        <strong>Facility information :</strong> Location, production and season timing.
+                        <strong>Job Categories:</strong> List of work areas, all job categories, and number of men and women in each job category.
+                        
+                        <strong>Wages and bonuses:</strong> Seasonal unit and rate at which each job category is paid and average bonus amount per job category in gross value.
+                        
+                        <strong>In-kind benefits:</strong>amount spent by company to provide in-king benefits, number of workers who receive in-kind benefits.
+                        
+                        In addition to the results provided in this Salary Matrix, IDH offers to visualize your results 
+                        as shown on the final tab. For questions, please email IDH at:
+                        
+                        <strong>livingwagematrix@idhtrade.org</strong></mat-card>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div fxLayout fxLayout.xs="flex">
+            <div fxFlex="94%" class="SalaryMatrix_tbl">       
+                <div fxLayout fxLayout.xs="column" class="topBtn"> 
+                <div fxFlex="50%">
+                    <div fxFlex="14%"> <button mat-raised-button>Draft</button></div>
+                    <div fxFlex="14%"> <button mat-raised-button >Created</button></div>
+                </div>
+                <div fxFlex="50%">
+                  <a mat-raised-button href="#" color="primary" class="newMtx text-right">Create New Matrix</a>
+                </div>
+                </div>
+              
+              <div class="mat-elevation-z8 datadashboard">
+                <table mat-table [dataSource]="dataSource" matSort>
+              
+                  <!-- ID Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Matrix Description </th>
+                    <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                  </ng-container>
+              
+               
+              
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Supplier </th>
+                    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                  </ng-container>
+        
+                        
+                  <!-- Created Date Column -->
+                  <ng-container matColumnDef="cdate">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
+                    <td mat-cell *matCellDef="let row"> {{row.cdate}} </td>
+                  </ng-container>
+        
+                            <!-- Created Final Date Column -->
+                            <ng-container matColumnDef="fdate">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Finalized Date </th>
+                                <td mat-cell *matCellDef="let row"> {{row.fdate}} </td>
+                              </ng-container>
+        
+                     <!-- Created Final Date Column -->
+                     <ng-container matColumnDef="mgenerate">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary Matrix Generated </th>
+                        <td mat-cell *matCellDef="let row"> {{row.mgenerate}} </td>
+                      </ng-container>
+        
+                   
+        
+        
+              
+               
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                  </tr>
+               
+                </table>
+                <div class="viewMore">
+                    <a href="#">View More</a>
+                </div>
+                 
+                <mat-paginator class="dnone" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+              </div>
+              </div>
         </div>
     </div>
-
-
 </div>
 
-<div fxLayout fxLayout.xs="flex">
-    <div fxFlex="94%" class="SalaryMatrix_tbl">       
-
-        <div fxLayout fxLayout.xs="column"> 
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline">
-                <mat-label>Filter</mat-label>
-                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
-            </mat-form-field>
-        </div>
-        
-        <div fxFlex="35%"></div>
-        <div fxFlex="7%"> <button mat-raised-button class="basic">Draft</button></div>
-        <div fxFlex="7%"> <button mat-raised-button class="primary">Created</button></div>
-        </div>
-      
-      <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" matSort>
-      
-          <!-- ID Column -->
-          <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Matrix Description </th>
-            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-          </ng-container>
-      
-       
-      
-          <!-- Name Column -->
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Supplier </th>
-            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
-          </ng-container>
-
-                
-          <!-- Created Date Column -->
-          <ng-container matColumnDef="cdate">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
-            <td mat-cell *matCellDef="let row"> {{row.cdate}} </td>
-          </ng-container>
-
-                    <!-- Created Final Date Column -->
-                    <ng-container matColumnDef="fdate">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Finalized Date </th>
-                        <td mat-cell *matCellDef="let row"> {{row.fdate}} </td>
-                      </ng-container>
-
-             <!-- Created Final Date Column -->
-             <ng-container matColumnDef="mgenerate">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary Matrix Ganerated </th>
-                <td mat-cell *matCellDef="let row"> {{row.mgenerate}} </td>
-              </ng-container>
-
-           
 
 
-      
-       
-      
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;">
-          </tr>
-        </table>
-      
-        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-      </div>
-      </div>
-</div>
+
+
+
 
 <!--<mat-toolbar class="app-footer">
     <div fxLayout fxLayout.xs="column" class="wd100">
