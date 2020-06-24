@@ -1,0 +1,298 @@
+<mat-toolbar class="app-header">
+    <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
+    <div fxLayout fxLayout.xs="column" class="wid30p">
+        <div fxFlex="30%" class="lang">
+            <mat-form-field >
+                <mat-select [(value)]="selected">
+                    <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
+                </mat-select> 
+            </mat-form-field>  
+        </div>
+        <div fxFlex="45%" class="newMatrixBtn">
+            <a mat-raised-button href="#">Create New Matrix</a>
+        </div>
+        <div fxFlex="10%" class="help">
+           <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
+        </div>
+       <div fxFlex="15%" align="right" class="logoutCon">
+            <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>
+       </div> 
+    </div>
+</mat-toolbar>
+
+<div class="wizard-wrapper" fxLayout fxLayout.xs="flex">
+    <div style="margin: 0 auto;">
+    <button mat-raised-button [ngClass]="{'basic':step!=0, 'btn-block':true, 'primary':step===0}" style="margin-right: 1rem;">Basic Information</button>
+    <button mat-raised-button [ngClass]="{'basic':step!=1, 'btn-block':true, 'primary':step===1}" style="margin-right: 1rem;">Facility Information</button>
+    <button mat-raised-button [ngClass]="{'basic':step!=2, 'btn-block':true, 'primary':step===2}" style="margin-right: 1rem;">HR Information</button>
+    <button mat-raised-button [ngClass]="{'basic':step!=3, 'btn-block':true, 'primary':step===3}" style="margin-right: 1rem;">Wages Information</button>
+    <button mat-raised-button [ngClass]="{'basic':step!=4, 'btn-block':true, 'primary':step===4}" style="margin-right: 1rem;">Inkind Benefits</button>
+    </div>
+</div>
+<div class=" aboutTool" fxLayout fxLayout.xs="flex">
+    
+    <mat-card class="box" *ngIf="step===0">
+        
+
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+               
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <!-- <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" >Cancel</button>
+                </div> -->
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+    <mat-card class="box" *ngIf="step===1">
+       
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+               
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" (click)="wizardPrev()">Back</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+    <mat-card class="box" *ngIf="step===2">
+        
+
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+               
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" (click)="wizardPrev()">Back</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+    <mat-card class="box" *ngIf="step===3">
+       
+
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+               
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" (click)="wizardPrev()">Back</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+    <mat-card class="box" *ngIf="step===4">
+      
+
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+               
+                </div>
+                <div fxLayout fxLayout.xs="flex" class="loginInput">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                </div>
+
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="32%">
+                    <button mat-raised-button class="basic btn-block" (click)="wizardPrev()">Back</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="64%">
+                    <button mat-raised-button  class="btn-block primary" (click)="saveMatrix()">Create Matrix</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+</div>
