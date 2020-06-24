@@ -11,17 +11,11 @@ export class NewMatrixComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) {}
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  
   step=0;
   
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+    
   }
 
   wizardPrev(){
@@ -32,5 +26,8 @@ export class NewMatrixComponent implements OnInit {
   }
   saveMatrix(){
     alert("Saved");
+  }
+  selectStep(data){
+    this.step=data;
   }
 }

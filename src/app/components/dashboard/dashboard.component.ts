@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 
@@ -46,6 +47,10 @@ const MGENERATED: string[] = [
 
 
 export class DashboardComponent implements OnInit {
+  panelOpenState = false;
+  showFiller = true;
+  isChecked = true;
+  formGroup: FormGroup;
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
   
@@ -54,7 +59,8 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
-
+  
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
   constructor() {
      // Create 100 users
      const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
