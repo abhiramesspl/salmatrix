@@ -28,9 +28,10 @@ body{font-family:GothamBook !important;}
     .mat-form-field-appearance-outline:hover .mat-form-field-outline:hover{color:#d3d3d3 !important}
 .loginImage{width: 42%;
     height: 100%;
-    background: #0071C4;
+    background-image:url('assets/images/bg.png');
     box-shadow: 3px 2px 20px 6px rgba(36, 77, 162, 0.15);
-position:relative}
+    position: relative;
+   }
 .box{padding: 1rem 7rem;
     width: 42%;}
 
