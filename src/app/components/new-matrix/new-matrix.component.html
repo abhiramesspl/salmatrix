@@ -38,70 +38,17 @@
     <div fxFlex="85%">
 <div class="wizard-wrapper" fxLayout fxLayout.xs="flex">
     <div style="margin: 0 auto;">
-    <button (click)="selectStep(0)" mat-raised-button [ngClass]="{'basic':step!=0, 'btn-block':true, 'primary':step===0}" style="margin-right: 1rem;">Basic Information</button>
-    <button (click)="selectStep(1)" mat-raised-button [ngClass]="{'basic':step!=1, 'btn-block':true, 'primary':step===1}" style="margin-right: 1rem;">Facility Information</button>
-    <button (click)="selectStep(2)" mat-raised-button [ngClass]="{'basic':step!=2, 'btn-block':true, 'primary':step===2}" style="margin-right: 1rem;">HR Information</button>
-    <button (click)="selectStep(3)" mat-raised-button [ngClass]="{'basic':step!=3, 'btn-block':true, 'primary':step===3}" style="margin-right: 1rem;">Wages Information</button>
-    <button (click)="selectStep(4)" mat-raised-button [ngClass]="{'basic':step!=4, 'btn-block':true, 'primary':step===4}" style="margin-right: 1rem;">Inkind Benefits</button>
+    <button (click)="selectStep(0)" mat-raised-button [ngClass]="{'basic':step!=0, 'btn-block':true, 'primary':step===0}" style="margin-right: 1rem; height: 40px;">Basic Information<span [ngClass]="{'arrow-down':step==0}"></span>
+    </button>
+    <button (click)="selectStep(1)" mat-raised-button [ngClass]="{'basic':step!=1, 'btn-block':true, 'primary':step===1}" style="margin-right: 1rem; height: 40px;">Product Information<span [ngClass]="{'arrow-down':step==1}"></span></button>
+    <button (click)="selectStep(2)" mat-raised-button [ngClass]="{'basic':step!=2, 'btn-block':true, 'primary':step===2}" style="margin-right: 1rem; height: 40px;">HR Information<span [ngClass]="{'arrow-down':step==2}"></span></button>
+    <button (click)="selectStep(3)" mat-raised-button [ngClass]="{'basic':step!=3, 'btn-block':true, 'primary':step===3}" style="margin-right: 1rem; height: 40px;">Wages Information<span [ngClass]="{'arrow-down':step==3}"></span></button>
+    <button (click)="selectStep(4)" mat-raised-button [ngClass]="{'basic':step!=4, 'btn-block':true, 'primary':step===4}" style="margin-right: 1rem; height: 40px;">Inkind Benefits<span [ngClass]="{'arrow-down':step==4}"></span></button>
     </div>
 </div>
 
 <div class=" aboutTool" fxLayout fxLayout.xs="flex">
-    
     <mat-card class="box" *ngIf="step===0">
-        
-
-        <form class="example-form">
-            <mat-card-content>
-                <div fxLayout fxLayout.xs="column" class="loginInput">
-            <div fxFlex="48%">
-                <mat-form-field appearance="outline">
-                    <mat-label>First Name</mat-label>
-                    <input matInput type="text">
-                </mat-form-field>
-            </div>
-            <div fxFlex="4%"></div>
-            <div fxFlex="48%">
-                <mat-form-field appearance="outline">
-                    <mat-label>Last Name</mat-label>
-                    <input matInput type="text">
-                </mat-form-field>
-            </div>
-
-                </div>
-
-                <div fxLayout fxLayout.xs="flex" class="loginInput">
-                <mat-form-field appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput type="text">
-                </mat-form-field>
-                </div>
-                <div fxLayout fxLayout.xs="flex" class="loginInput">
-               
-                </div>
-                <div fxLayout fxLayout.xs="flex" class="loginInput">
-                <mat-form-field appearance="outline">
-                    <mat-label>Confirm Password</mat-label>
-                    <input matInput type="password">
-                </mat-form-field>
-                </div>
-
-            </mat-card-content>
-            <div fxLayout fxLayout.xs="column" class="floatRight">
-                <!-- <div fxFlex="48%">
-                    <button mat-raised-button class="basic btn-block" >Cancel</button>
-                </div> -->
-                <div fxFlex="4%"></div>
-                <div fxFlex="48%">
-                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
-                </div>
-            </div>
-            
-        </form>
-
-      
-    </mat-card>
-    <mat-card class="box" *ngIf="step===1">
        
         <form class="example-form">
             <mat-card-content>
@@ -188,6 +135,120 @@
 
       
     </mat-card>
+    <mat-card class="box" *ngIf="step===1">
+       <mat-header class="info">Season Information</mat-header>  
+
+        <form class="example-form">
+            <mat-card-content>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Product</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Varieties or Types grown</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Unit of Production</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Total Annual Production</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Certification and Standards</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Year of Data Collection</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+                <div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Number Of Production Season </mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <!-- <mat-form-field appearance="outline">
+                    <mat-label>Year of Data Collection</mat-label>
+                    <input matInput type="text">
+                </mat-form-field> -->
+            </div>
+
+                </div>
+
+<mat-header class="info">Season Information</mat-header>  
+               
+<div fxLayout fxLayout.xs="column" class="loginInput">
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                   
+                            <mat-label>Select Unit for Definig Season length</mat-label>
+                            <mat-select name="seasonlengthin">
+                              <mat-option value="Weeks"> Weeks</mat-option>
+                              <mat-option value="Months"> Months</mat-option>
+                            </mat-select>
+                    
+                </mat-form-field>
+            </div>
+            <div fxFlex="4%"></div>
+            <div fxFlex="48%">
+                <mat-form-field appearance="outline">
+                    <mat-label>No Of Weeks or Months</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+
+                </div>
+
+                
+               
+                
+            </mat-card-content>
+            <div fxLayout fxLayout.xs="column" class="floatRight">
+                <div fxFlex="48%">
+                    <button mat-raised-button class="basic btn-block" (click)="wizardPrev()">Back</button>
+                </div>
+                <div fxFlex="4%"></div>
+                <div fxFlex="48%">
+                    <button mat-raised-button  class="btn-block primary" (click)="wizardNext()">Next</button>
+                </div>
+            </div>
+            
+        </form>
+
+      
+    </mat-card>
+    
+    
     <mat-card class="box" *ngIf="step===2">
         
 
