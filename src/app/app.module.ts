@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CountryRegionComponent } from './components/pages/country-region/country-region.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -22,7 +23,8 @@ import { NewMatrixComponent } from './components/new-matrix/new-matrix.component
     ForgotPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
-    NewMatrixComponent
+    NewMatrixComponent,
+    CountryRegionComponent
   ],
   imports: [
     BrowserModule,

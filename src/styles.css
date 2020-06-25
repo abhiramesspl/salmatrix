@@ -75,6 +75,39 @@ body .mat-form-field{font-family:GothamBook !important;}
                     top: 1.15rem;
                     position: relative;}
                     .SalaryMatrix_tbl{margin:0 auto;}
+
+                    .mat-toolbar .mat-form-field{width: 75px;}
+                    .mat-select{color: #fff;}
+
+                    /*---------Global Table Design--------*/
+                    
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 20%;
+  font-family:GothamBook;
+  font-size:.875rem;
+}
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+                    /*----------Global Table Design End---------------*/
 /*----------------New Design Changes End-----------------*/
 
 .logo{text-decoration:none;color:#ffffff;}
@@ -98,7 +131,10 @@ body .mat-form-field{font-family:GothamBook !important;}
     .sidenavBar .activemenu{background: #142e54 !important;}
     .sidenavBar{background: #0081e0;
         top: 4rem;
-        position: relative;}
+        position: relative;
+        height: calc(100vh - 64px);}
+        .datadashboard{width:100%}
+        .innerPage{position: relative;top:2rem}
     .sidenavBar .mat-list-item{color: #fff;
         font-size: 0.875rem;
         font-family: GothamBook;
