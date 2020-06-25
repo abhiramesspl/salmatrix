@@ -17,6 +17,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
    imports: [
@@ -38,7 +39,7 @@ import {MatStepperModule} from '@angular/material/stepper';
       MatTableModule,
       MatPaginatorModule,
       MatStepperModule,
-      
+      MatCheckboxModule
    ],
    exports: [
       MatButtonModule,
@@ -56,7 +57,8 @@ import {MatStepperModule} from '@angular/material/stepper';
       MatChipsModule,
       MatTooltipModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      MatCheckboxModule
    ],
    providers: [
       MatDatepickerModule,
