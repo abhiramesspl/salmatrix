@@ -6,9 +6,7 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
   selector: 'app-addmatrix',
   templateUrl: './addmatrix.component.html',
   styleUrls: ['./addmatrix.component.css'],
-  providers: [{
-    provide: STEPPER_GLOBAL_OPTIONS, useValue: {displayDefaultIndicatorType: false}
-  }]
+  
 })
 export class AddmatrixComponent implements OnInit {
   languages: any= ['EN', 'FR'];

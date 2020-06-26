@@ -17,6 +17,10 @@ import { NewMatrixComponent } from './components/new-matrix/new-matrix.component
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
 import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
+import { BranchComponent } from './components/branch/branch.component';
+import { ProductGroupComponent } from './components/product-group/product-group.component';
+import { ProductCategoryComponent } from './components/product-category/product-category.component';
+import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
     CountryRegionComponent,
     RegionComponent,
     HeaderComponent,
-    AddmatrixComponent
+    AddmatrixComponent,
+    BranchComponent,
+    ProductGroupComponent,
+    ProductCategoryComponent,
+    LivingWageBenchmarkComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,10 @@ import { CountryRegionComponent} from './components/pages/country-region/country
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
 import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
+import { BranchComponent } from './components/branch/branch.component';
+import { ProductCategoryComponent } from './components/product-category/product-category.component';
+import { ProductGroupComponent } from './components/product-group/product-group.component';
+import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -21,7 +25,11 @@ const routes: Routes = [
   { path: 'new-matrix', component: NewMatrixComponent },
   { path: 'country-region', component: CountryRegionComponent},
   { path: 'region', component: RegionComponent },
-  { path: 'addmatrix', component: AddmatrixComponent}
+  { path: 'addmatrix', component: AddmatrixComponent},
+  { path: 'branch', component: BranchComponent},
+  { path: 'product-category', component: ProductCategoryComponent},
+  { path: 'product-group', component: ProductGroupComponent},
+  { path: 'living-wage-benchmark', component: LivingWageBenchmarkComponent},
 ];
 
 @NgModule({
