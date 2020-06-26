@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewMatrixComponent } from './components/new-matrix/new-matrix.component';
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
+import { SidenavComponent } from './components/generic/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeaderComponent } from './components/generic/header/header.component';
     NewMatrixComponent,
     CountryRegionComponent,
     RegionComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

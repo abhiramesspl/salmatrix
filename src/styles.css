@@ -73,12 +73,12 @@ body .mat-form-field{font-family:GothamBook !important;}
             .newUser a{font-weight: 600;
                 padding-left: 0.75rem;
                 color: #0072c6;}
-                .aboutTool .custom-card{width: 95%;
-                    background: #e1edff;
-                    padding: 1.75rem 1.75rem;
-                    color: #000;
-                    margin: 1rem 0px 2.25rem;
-                    line-height: 1.35rem;}
+                .aboutTool .custom-card{width: 90%;
+                  background: #e1edff;
+                  padding: 1.75rem 1.75rem;
+                  color: #000;
+                  margin: 0rem auto 2.5rem;
+                  line-height: 1.35rem;}
                 .wid25p{width:25%}
                 .wid50p{width:50%}
                 .lang .mat-select-value-text{letter-spacing: 0.75px; font-size: 0.875rem;}
@@ -222,7 +222,9 @@ td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
           top: 0.95rem;
           position: relative;font-size:1.15rem}
 .logoutBtn mat-icon{position: relative;top: 5px;}
-
+.homePage{position: relative;
+  top: 2rem;
+  left: 15%;}
 .wid15p{width: 15%;}
 .wid40p{width:40%}
 .app-header .mat-form-field-underline{background-color:#fff!important;}

@@ -1,41 +1,9 @@
-<mat-toolbar class="app-header">
-    <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
-    <div fxLayout fxLayout.xs="column" class="wid25p">
-        <div fxFlex="40%" class="lang">
-            <mat-form-field >
-                <mat-select [(value)]="selected">
-                    <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
-                </mat-select>
-            </mat-form-field>  
-        </div>
-        <div fxFlex="20%" class="help">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
-         </div>
-        <div fxFlex="40%" class="newMatrixBtn">
-           <div class="profileImage">
-               <img src="assets/images/profileBran.png">
-           </div>
-           <div class="profileName">Hi Robin
-           </div>
-        </div>
 
-       <div fxFlex="15%" align="right" class="logoutCon">
-           <!-- <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>-->
-       </div> 
-    </div>
-</mat-toolbar>
 
 <div fxLayout fxLayout.xs="column">
-    <div fxFlex="15%" class="sidenavBar" style="height: 100vh;">
-        <mat-list role="list">
-            <mat-list-item role="listitem" class="activemenu">Supplier Dashboard</mat-list-item>
-            <mat-list-item role="listitem">Matrices</mat-list-item>
-            <mat-list-item role="listitem">Reports</mat-list-item>
-            <mat-list-item role="listitem">Configuration</mat-list-item>
-            <mat-list-item role="listitem">Help</mat-list-item>
-          </mat-list>
-    </div>
-    <div fxFlex="85%">
+<app-sidenav></app-sidenav>
+    <div fxFlex="85%" class="innerPage">
+        <app-header></app-header>
 <div class="wizard-wrapper" fxLayout fxLayout.xs="flex">
     <div style="margin: 0 auto;">
     <button (click)="selectStep(0)" mat-raised-button [ngClass]="{'basic':step!=0, 'btn-block':true, 'primary':step===0}" style="margin-right: 1rem; height: 40px;">Basic Information<span [ngClass]="{'arrow-down':step==0}"></span>
