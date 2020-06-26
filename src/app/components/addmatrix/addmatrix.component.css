@@ -1,7 +1,11 @@
 .mat-stepper-horizontal {
-    margin-top: 10%;
+    padding-top: 3rem;
+    font-family:GothamBook;
   }
   
   .mat-form-field {
     margin-top: 16px;
   }
+  .wizardNext .matStepperNext{background: #0081e0;
+    color: #fff;float:right}
+    .wizardNext .matStepperPrevious{}

@@ -24,6 +24,7 @@ import { ProductCategoryComponent } from './components/product-category/product-
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
