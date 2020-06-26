@@ -319,39 +319,36 @@
 
 
                 <form class="example-form">
-                    <mat-card-content>
-                        <div fxLayout fxLayout.xs="column" class="loginInput">
-                            <div fxFlex="48%">
+                    <mat-card-content *ngFor="let workarea of workAreas">
+                        <h3>{{workarea}}</h3>
+                        <div fxLayout fxLayout.xs="column" class="loginInput" *ngFor="let jobcategory of jobCategories">
+                            <div fxFlex="25%">
+                                <h3>{{jobcategory}}</h3>
+                            </div>
+                            <div fxFlex="20%">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>First Name</mat-label>
+                                    <mat-label>Men</mat-label>
                                     <input matInput type="text">
                                 </mat-form-field>
                             </div>
-                            <div fxFlex="4%"></div>
-                            <div fxFlex="48%">
+                            <div fxFlex="8%"></div>
+                            <div fxFlex="20%">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>Last Name</mat-label>
+                                    <mat-label>Women</mat-label>
                                     <input matInput type="text">
                                 </mat-form-field>
                             </div>
+                            <div fxFlex="7%"></div>
+                            <div fxFlex="20%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                     
 
-                        </div>
 
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Email</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
-                        </div>
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-
-                        </div>
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Confirm Password</mat-label>
-                                <input matInput type="password">
-                            </mat-form-field>
-                        </div>
 
                     </mat-card-content>
                     <div fxLayout fxLayout.xs="column" class="floatRight">
@@ -372,39 +369,36 @@
 
 
                 <form class="example-form">
-                    <mat-card-content>
-                        <div fxLayout fxLayout.xs="column" class="loginInput">
-                            <div fxFlex="48%">
+                    <mat-card-content *ngFor="let workarea of workAreas">
+                        <h3>{{workarea}}</h3>
+                        <div fxLayout fxLayout.xs="column" class="loginInput" *ngFor="let jobcategory of jobCategories">
+                            <div fxFlex="25%">
+                                <h3>{{jobcategory}}</h3>
+                            </div>
+                            <div fxFlex="20%">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>First Name</mat-label>
+                                    <mat-label>Men</mat-label>
                                     <input matInput type="text">
                                 </mat-form-field>
                             </div>
-                            <div fxFlex="4%"></div>
-                            <div fxFlex="48%">
+                            <div fxFlex="8%"></div>
+                            <div fxFlex="20%">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>Last Name</mat-label>
+                                    <mat-label>Women</mat-label>
                                     <input matInput type="text">
                                 </mat-form-field>
                             </div>
+                            <div fxFlex="7%"></div>
+                            <div fxFlex="20%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                     
 
-                        </div>
 
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Email</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
-                        </div>
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-
-                        </div>
-                        <div fxLayout fxLayout.xs="flex" class="loginInput">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Confirm Password</mat-label>
-                                <input matInput type="password">
-                            </mat-form-field>
-                        </div>
 
                     </mat-card-content>
                     <div fxLayout fxLayout.xs="column" class="floatRight">
