@@ -14,7 +14,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewMatrixComponent } from './components/new-matrix/new-matrix.component';
-import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
+import { RegionComponent } from './components/pages/region/region.component';
+import { HeaderComponent } from './components/generic/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
     DashboardComponent,
     NewMatrixComponent,
     CountryRegionComponent,
-    AddmatrixComponent
+    RegionComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

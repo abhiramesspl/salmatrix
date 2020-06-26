@@ -13,19 +13,22 @@ export interface UserData {
   lang: string;
   created:string;
   updated:string;
+  delete:string;
+  country:string;
+  save:string;
 }
 
 const ELEMENT_DATA: UserData[] = [
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
-  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {ISOID: 'AF', currency: 'AFN', sww: 48, lang: 'Afghanistan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
 
 
 
@@ -40,10 +43,7 @@ const ELEMENT_DATA: UserData[] = [
 })
 
 export class CountryRegionComponent implements OnInit {
-  languages: any= ['EN', 'FR'];
-  selected:any = 'EN';
-
-  displayedColumns: string[] = ['select', 'ISOID', 'currency', 'sww', 'lang','created', 'updated'];
+  displayedColumns: string[] = ['select', 'ISOID', 'currency', 'sww', 'lang','created', 'updated','country','delete','save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 

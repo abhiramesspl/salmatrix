@@ -9,7 +9,17 @@
 }
 html,body{height:100%;margin:0;padding:0;}
 body{font-family:GothamBook !important;}
-.app-header{justify-content:space-between;position:fixed;top:0;left:0;right:0;z-index:2;box-shadow:0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);background-color: #0072c6;}
+.app-header{
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 15%;
+  right: 0;
+  z-index: 2;
+ /* box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);*/
+  background-color: #0081e0;
+  width: 85% !important;
+  float: right;}
 /*.login-wrapper{background:linear-gradient(0deg, rgba(0, 126, 255, 0.3), rgba(63, 0, 255, 0.3)),url(assets/images/bg.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;height: 100%;}
 */
 /*------------------New Design Changes------------------*/
@@ -70,6 +80,7 @@ body .mat-form-field{font-family:GothamBook !important;}
                     margin: 1rem 0px 2.25rem;
                     line-height: 1.35rem;}
                 .wid25p{width:25%}
+                .wid50p{width:50%}
                 .lang .mat-select-value-text{letter-spacing: 0.75px; font-size: 0.875rem;}
                 .help{color: #fff;
                     top: 1.15rem;
@@ -78,6 +89,9 @@ body .mat-form-field{font-family:GothamBook !important;}
 
                     .mat-toolbar .mat-form-field{width: 75px;}
                     .mat-select{color: #fff;}
+                    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+                      background-color:#0072c6 !important;
+                    }
 
                     /*---------Global Table Design--------*/
                     
@@ -129,26 +143,41 @@ td, th {
     border: 1px solid #0072c6;}
     .profileImage{width:auto;float:left}
     .sidenavBar .activemenu{background: #142e54 !important;}
-    .sidenavBar{background: #0081e0;
-        top: 4rem;
-        position: relative;
-        height: calc(100vh - 64px);}
+    .sidenavBar{background: #0072c6;
+      /* top: 4rem; */
+      position: relative;
+      height: calc(100vh);
+      position: fixed;
+      width: 15%;
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);}
         .datadashboard{width:100%}
-        .innerPage{position: relative;top:2rem}
+        .innerPage{position: relative;top:2rem;left:15%}
+        .sidenavBar .mat-list-base{margin-top: 3.75rem;}
     .sidenavBar .mat-list-item{color: #fff;
-        font-size: 0.875rem;
-        font-family: GothamBook;
-        letter-spacing: 0.25px;
-        font-weight: 500;}
-    .profileName{    width: auto;
-        float: left;
-        color: #fff;
-        font-size: 0.875rem;
-        font-weight: 400;
-        letter-spacing: 0.75px;
-        top: 0.25rem;
-        position: relative;
-        left: 1rem;}
+      font-size: 0.8rem;
+      font-family: GothamMedium;
+      font-weight: 500;
+      text-shadow: none;
+      letter-spacing: 0.75px;}
+      .sidenavToggle{color: #fff;
+        font-size: 1.5rem;
+        text-align: right;
+        display: inline-block;
+        float: right;
+        margin-right: 1.75rem;
+        line-height: 75px;}
+        .mat-elevation-z8{box-shadow:none;border:1px solid #d3d3d3 !important;}
+        .logo img{width: 225px;
+          margin-top: 9px;}
+      .awesome_icon{padding:0px 10px 0px 0px}
+    .profileName{ width: auto;
+      float: left;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 500;
+      top: 0.25rem;
+      position: relative;
+      left: 0.75rem;}
 .viewMore{padding: 1rem 2rem;
     text-align: right;}
     .viewMore a{color: #0072c6;
@@ -180,21 +209,26 @@ td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
 .newUser{margin-top:2.75rem;padding-top:1rem;}
 .newUser a{text-decoration: none;font-weight: 400;}
 .nav-tool-items a{text-decoration: none;}
-.logoutBtn{background: #fff;
-    color: #000;
-    padding: 8px;
-    border-radius: 100%;
-    position: relative;
-    top: 0.67rem;}
+.logoutBtn{    color: #fff;
+  padding: 8px;
+  border-radius: 100%;
+  position: relative;
+  top: 0.67rem;
+  text-decoration: none;
+  font-size: 0.875rem;}
     .newMatrixBtn{position: relative;
-        top: 0.65rem;}
+        top: 0.55rem;}
+        .notificationIcon{color: #fff;
+          top: 0.95rem;
+          position: relative;font-size:1.15rem}
 .logoutBtn mat-icon{position: relative;top: 5px;}
-.logoutBtn:hover{background: #ccc;}
+
 .wid15p{width: 15%;}
+.wid40p{width:40%}
 .app-header .mat-form-field-underline{background-color:#fff!important;}
 .app-footer{justify-content:space-between;position:fixed;bottom:0;left:0;right:0;z-index:2;box-shadow:0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);background-color: #0072c6;color: #fff;font-weight: 400;font-size: 1rem;}
 .wd100{width: 100%;}
-.dashboard-wrapper{width: 94%;
+.dashboard-wrapper{width: 100%;
     margin: 4rem auto 00;}
 .custom-card {width: 90%;padding: 10px;margin: 10px 0px;border-radius: 10px;text-align: justify;}
 .custom-card h3{    font-size: 1rem;
@@ -205,10 +239,37 @@ td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
 .blcolorbx{background: rgba(161, 222, 251, 0.94);color: #000;}
 .grcolorbx{background: rgba(176, 232, 133, 0.9);color: #000;}
 .greycolorbx{background: rgba(186, 202, 175, 0.9);color:#000;}
+.fontawesome_icon{padding:0px 5px 0px 0px}
+.saveBtn{background:#36ab40 !important}
+table th.mat-header-cell{color: #333;
+  font-weight: 600;}
 .font2rem{font-size: 1.5rem!important;}
 .refreshBtn{cursor: pointer;}
 .refreshBtn:hover{color: grey;}
+/*------Custom Scroll Bar------*/
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background:#202020; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background:#202020; 
+}
+/*-------------Custom Scroll Bar---------*/
 /*----Toggle Css----*/
 .toggleSwitch span span {
     display: none;
@@ -313,6 +374,7 @@ td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out;
     }
+    .archiveBtn{background: #f64e60 !important;}
     .toggleSwitch input:checked ~ a {
       border-color: #fff;
       left: 100%;
