@@ -4,6 +4,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectionModel } from '@angular/cdk/collections';
+import {MatDialog,MatDialogRef} from '@angular/material/dialog';
+import { AddclientuserComponent } from '../addclientuser/addclientuser.component';
 
 export interface UserData {
   name: string;
@@ -32,6 +34,15 @@ const ELEMENT_DATA: UserData[] = [
   styleUrls: ['./supplieruser.component.css']
 })
 export class SupplieruserComponent implements OnInit {
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(AddclientuserComponent, {
+      width: '40vw',
+      data:{dialogtitle:'New Supplier'}
+    });
+  }
 
   displayedColumns: string[] = ['select', 'name', 'organization', 'email', 'phonenumber', 'created', 'updated', 'delete', 'save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);

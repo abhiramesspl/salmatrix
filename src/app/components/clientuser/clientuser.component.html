@@ -2,28 +2,7 @@
 
 
 <div fxLayout fxLayout.xs="column">
-    <div fxFlex="15%" class="sidenavBar">
-        <mat-list role="list">
-            <mat-list-item role="listitem" ><span class="awesome_icon">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i></span>Dashboard</mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-id-card" aria-hidden="true"></i></span>Matrices
-            </mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-file-text" aria-hidden="true"></i></span>Reports
-            </mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>Configuration
-            </mat-list-item>
-
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-globe" aria-hidden="true"></i></span>Countries/Region
-            </mat-list-item>
-            <mat-list-item role="listitem" class="activemenu">
-                <span class="awesome_icon"><i class="fa fa-globe" aria-hidden="true"></i></span>Suppliers
-            </mat-list-item>
-        </mat-list>
-    </div>
+    <app-sidenav></app-sidenav>
     <div fxFlex="85%" class="innerPage">
         <app-header></app-header>
 
@@ -32,7 +11,7 @@
 
                 <div fxLayout fxLayout.xs="column" class="topBtn">
                     <div fxFlex="73%">
-                        <h4 class="header-title">All Suppliers</h4>
+                        <h4 class="header-title">System Users</h4>
                     </div>
                     <div fxFlex="10%">
                         <a mat-raised-button color="primary" class="archiveBtn">
@@ -48,7 +27,7 @@
                             <span class="fontawesome_icon">
                                 <i class="fa fa-plus" aria-hidden="true"></i>
                             </span>
-                            Add New Supplier</a>
+                            Add New User</a>
                     </div>
                 </div>
 

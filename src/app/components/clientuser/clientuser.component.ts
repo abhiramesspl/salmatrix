@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectionModel } from '@angular/cdk/collections';
 import {MatDialog,MatDialogRef} from '@angular/material/dialog';
+import { AddclientuserComponent } from '../addclientuser/addclientuser.component';
 
 export interface UserData {
   name: string;
@@ -39,7 +40,10 @@ export class ClientuserComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
   
   openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
+    this.dialog.open(AddclientuserComponent, {
+      width: '40vw',
+      data:{dialogtitle:'System Users'}
+    });
   }
 
   displayedColumns: string[] = ['select', 'name', 'organization', 'email', 'phonenumber', 'created', 'updated', 'delete', 'save'];
@@ -63,16 +67,4 @@ export class ClientuserComponent implements OnInit {
 
   }
 
-}
-
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: 'dialog-elements-example-dialog.html',
-})
-export class DialogElementsExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogElementsExampleDialog>) {}
-
-  closeDialog(): void  {
-    this.dialogRef.close();
-  }
 }
