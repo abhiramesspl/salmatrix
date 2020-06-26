@@ -58,6 +58,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
       MatTooltipModule,
       MatTableModule,
       MatPaginatorModule,
+      MatStepperModule,
       MatCheckboxModule
    ],
    providers: [

@@ -1,0 +1,374 @@
+<mat-toolbar class="app-header">
+    <div><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%"
+                height="100%"></a></div>
+    <div fxLayout fxLayout.xs="column" class="wid25p">
+        <div fxFlex="40%" class="lang">
+            <mat-form-field>
+                <mat-select [(value)]="selected">
+                    <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div fxFlex="20%" class="help">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
+        </div>
+        <div fxFlex="40%" class="newMatrixBtn">
+            <div class="profileImage">
+                <img src="assets/images/profileBran.png">
+            </div>
+            <div class="profileName">Hi Robin
+            </div>
+        </div>
+
+        <div fxFlex="15%" align="right" class="logoutCon">
+            <!-- <a routerLink="/" routerLinkActive="active" class="logoutBtn"><mat-icon>power_settings_new</mat-icon></a>-->
+        </div>
+    </div>
+</mat-toolbar>
+
+<div fxLayout fxLayout.xs="column">
+    <div fxFlex="15%" class="sidenavBar" style="height: 100vh;">
+        <mat-list role="list">
+            <mat-list-item role="listitem" class="activemenu">Supplier Dashboard</mat-list-item>
+            <mat-list-item role="listitem">Matrices</mat-list-item>
+            <mat-list-item role="listitem">Reports</mat-list-item>
+            <mat-list-item role="listitem">Configuration</mat-list-item>
+            <mat-list-item role="listitem">Help</mat-list-item>
+        </mat-list>
+    </div>
+    <div fxFlex="85%">
+        <mat-horizontal-stepper #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Basic Information</ng-template>
+                    <mat-form-field>
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-card-content>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Facility Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Phone Number</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Facility Country</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Facility Location</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Facility Region</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Area Of Production</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Salary Matrix Manager</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                    </mat-card-content>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Product Information</ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <mat-card-content>
+                        <mat-header class="info">Season Information</mat-header>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Product</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Varieties or Types grown</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit of Production</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total Annual Production</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Certification and Standards</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Year of Data Collection</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Number Of Production Season </mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                            </div>
+
+                        </div>
+
+                        <mat-header class="info">Season Information</mat-header>
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+
+                                    <mat-label>Select Unit for Definig Season length</mat-label>
+                                    <mat-select name="seasonlengthin">
+                                        <mat-option value="Weeks"> Weeks</mat-option>
+                                        <mat-option value="Months"> Months</mat-option>
+                                    </mat-select>
+
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>No Of Weeks or Months</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                    </mat-card-content>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="thirdFormGroup">
+                <form [formGroup]="thirdFormGroup">
+                    <ng-template matStepLabel>HR Information</ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <mat-card-content>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+                        </div>
+
+                    </mat-card-content>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="fourthFormGroup">
+                <form [formGroup]="fourthFormGroup">
+                    <ng-template matStepLabel>Wages Information</ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="fourthCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <mat-card-content>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+                        </div>
+
+                    </mat-card-content>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="fifthFormGroup">
+                <form [formGroup]="fifthFormGroup">
+                    <ng-template matStepLabel>Inkind Benefits</ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="fifthCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <mat-card-content>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+
+                        </div>
+                        <div fxLayout fxLayout.xs="flex" class="loginInput">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+                        </div>
+
+                    </mat-card-content>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>

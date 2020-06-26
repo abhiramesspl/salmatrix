@@ -11,6 +11,8 @@ export class NewMatrixComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) {}
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
+  jobCategories = ['Category1','Category2'];
+  workAreas = ['Work Area 1','Work Area 2'];
   
   step=0;
   

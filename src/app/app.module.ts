@@ -17,6 +17,8 @@ import { NewMatrixComponent } from './components/new-matrix/new-matrix.component
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
 import { SidenavComponent } from './components/generic/sidenav/sidenav.component';
+import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SidenavComponent } from './components/generic/sidenav/sidenav.component
     CountryRegionComponent,
     RegionComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    AddmatrixComponent
   ],
   imports: [
     BrowserModule,
