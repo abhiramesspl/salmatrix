@@ -6,6 +6,22 @@
   .mat-form-field {
     margin-top: 16px;
   }
-  .wizardNext .matStepperNext{background: #0081e0;
-    color: #fff;float:right}
-    .wizardNext .matStepperPrevious{}
+  .workArea, .jobCategory{line-height: 36px;
+    letter-spacing: 0.45px;
+    text-align: right;
+    width: 80%;}
+    .workArea{font-family: GothamMedium;
+      font-size: .8rem;}
+    .jobCategory2{    position: relative;
+      top: 2rem;
+      width: 80%;
+      text-align: right;
+      letter-spacing: 0.5px;}
+  .wizardNext .matStepperNext{background: #0081e0 !important;
+    color: #fff !important;width:auto;display:inline-block;}
+    .wizardNext{float:right;width:auto}
+    .wizardNext .matStepperPrevious{background: #fff !important;
+      color: #333 !important;width:auto;display:inline-block;}
+
+    .innerPage .mat-step-header .mat-step-icon-selected, .innerPage .mat-step-header .mat-step-icon-state-done, .innerPage .mat-step-header .mat-step-icon-state-edit
+    {    background: #0081e0 !important;}
