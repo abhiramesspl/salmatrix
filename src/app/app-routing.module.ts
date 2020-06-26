@@ -9,6 +9,7 @@ import { NewMatrixComponent } from './components/new-matrix/new-matrix.component
 import { CountryRegionComponent} from './components/pages/country-region/country-region.component';
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
+import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'new-matrix', component: NewMatrixComponent },
   { path: 'country-region', component: CountryRegionComponent},
-  { path: 'region', component: RegionComponent }
+  { path: 'region', component: RegionComponent },
+  { path: 'addmatrix', component: AddmatrixComponent}
 ];
 
 @NgModule({
