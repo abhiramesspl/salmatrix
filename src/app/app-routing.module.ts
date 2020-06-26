@@ -14,6 +14,8 @@ import { BranchComponent } from './components/branch/branch.component';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
+import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
+import { ClientuserComponent } from './components/clientuser/clientuser.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -30,6 +32,8 @@ const routes: Routes = [
   { path: 'product-category', component: ProductCategoryComponent},
   { path: 'product-group', component: ProductGroupComponent},
   { path: 'living-wage-benchmark', component: LivingWageBenchmarkComponent},
+  { path: 'supplieruser', component: SupplieruserComponent},
+  { path: 'clientuser', component: ClientuserComponent}
 ];
 
 @NgModule({
