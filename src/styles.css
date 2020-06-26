@@ -152,7 +152,8 @@ td, th {
       box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);}
         .datadashboard{width:100%}
         .innerPage{position: relative;top:2rem;left:15%}
-        .sidenavBar .mat-list-base{margin-top: 3.75rem;}
+        tr.mat-header-row{background: #0081e0;}
+        /*.sidenavBar .mat-list-base{margin-top: 3.75rem;}*/
     .sidenavBar .mat-list-item{color: #fff;
       font-size: 0.8rem;
       font-family: GothamMedium;
@@ -167,8 +168,12 @@ td, th {
         margin-right: 1.75rem;
         line-height: 75px;}
         .mat-elevation-z8{box-shadow:none;border:1px solid #d3d3d3 !important;}
-        .logo img{width: 225px;
-          margin-top: 9px;}
+        .logo img{width: 175px;
+          margin-top: 0px;
+          padding: 0.2rem 0.75rem 0.27rem;
+          margin: 0 auto;
+          display: inline-block;
+          float: none;}
       .awesome_icon{padding:0px 10px 0px 0px}
     .profileName{ width: auto;
       float: left;
@@ -243,8 +248,9 @@ td[_ngcontent-lks-c146], th[_ngcontent-lks-c146]{width:20% !important;}
 .greycolorbx{background: rgba(186, 202, 175, 0.9);color:#000;}
 .fontawesome_icon{padding:0px 5px 0px 0px}
 .saveBtn{background:#36ab40 !important}
-table th.mat-header-cell{color: #333;
+table th.mat-header-cell{color: #fff;
   font-weight: 600;}
+  .mat-stepper-horizontal{padding-top:3.5rem !important;}
 .font2rem{font-size: 1.5rem!important;}
 .refreshBtn{cursor: pointer;}
 .refreshBtn:hover{color: grey;}

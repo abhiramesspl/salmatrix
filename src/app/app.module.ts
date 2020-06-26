@@ -20,6 +20,7 @@ import { SidenavComponent } from './components/generic/sidenav/sidenav.component
 import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
