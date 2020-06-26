@@ -4,9 +4,6 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
-
-
-
 export interface UserData {
   id: string;
   name: string;
@@ -42,15 +39,8 @@ const MGENERATED: string[] = [
   styleUrls: ['./dashboard.component.css']
 })
 
-
-
-
-
 export class DashboardComponent implements OnInit {
-  panelOpenState = false;
-  showFiller = true;
-  isChecked = true;
-  formGroup: FormGroup;
+ 
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
   
@@ -81,7 +71,8 @@ export class DashboardComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-  }}
+  }
+}
 
 
 /** Builds and returns a new User. */

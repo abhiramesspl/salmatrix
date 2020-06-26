@@ -6,6 +6,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewMatrixComponent } from './components/new-matrix/new-matrix.component';
+import { CountryRegionComponent} from './components/pages/country-region/country-region.component';
+import { RegionComponent } from './components/pages/region/region.component';
+import { HeaderComponent } from './components/generic/header/header.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -14,7 +17,9 @@ const routes: Routes = [
   { path: 'fpassword', component: ForgotPasswordComponent },
   { path: 'rpassword', component: ResetPasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'new-matrix', component: NewMatrixComponent }
+  { path: 'new-matrix', component: NewMatrixComponent },
+  { path: 'country-region', component: CountryRegionComponent},
+  { path: 'region', component: RegionComponent }
 ];
 
 @NgModule({

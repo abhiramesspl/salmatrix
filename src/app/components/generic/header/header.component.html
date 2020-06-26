@@ -1,0 +1,38 @@
+<mat-toolbar class="app-header">
+    <div fxLayout fxLayout.xs="column" class="wid50p">
+        <div fxFlex="10%">
+            <div class="sidenavToggle "><i class="fa fa-bars" aria-hidden="true"></i></div>
+        </div>
+        <div fxFlex="60%">
+            <div class="logo_wrap"><a href="#" class="logo"><img src="assets/images/oie_2172239HrxCJT6a.png" alt="image" width="70%" height="100%"></a></div>
+        </div>
+    </div>
+
+
+    <div fxLayout fxLayout.xs="column" class="wid40p">
+        <div fxFlex="25%" class="lang">
+            <mat-form-field >
+                <mat-select [(value)]="selected">
+                    <mat-option [value]="language" *ngFor="let language of languages">{{language}}</mat-option>
+                </mat-select>
+            </mat-form-field>  
+        </div>
+        <div fxFlex="10%" class="notificationIcon help">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+        </div>
+        <div fxFlex="12%" class="help">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
+         </div>
+        <div fxFlex="30%" class="newMatrixBtn">
+           <div class="profileImage">
+               <img src="assets/images/profileBran.png">
+           </div>
+           <div class="profileName">Jane Deo
+           </div>
+        </div>
+
+       <div fxFlex="15%" align="right" class="logoutCon">
+           <a routerLink="/" routerLinkActive="active" class="logoutBtn"><span class="awesome_icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>Log out</a>
+       </div> 
+    </div>
+</mat-toolbar>
