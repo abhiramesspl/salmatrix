@@ -16,11 +16,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewMatrixComponent } from './components/new-matrix/new-matrix.component';
 import { RegionComponent } from './components/pages/region/region.component';
 import { HeaderComponent } from './components/generic/header/header.component';
+import { SidenavComponent } from './components/generic/sidenav/sidenav.component';
 import { AddmatrixComponent } from './components/addmatrix/addmatrix.component';
 import { BranchComponent } from './components/branch/branch.component';
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark
     BranchComponent,
     ProductGroupComponent,
     ProductCategoryComponent,
-    LivingWageBenchmarkComponent
+    LivingWageBenchmarkComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
