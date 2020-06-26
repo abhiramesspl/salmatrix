@@ -22,7 +22,8 @@ import { BranchComponent } from './components/branch/branch.component';
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
-
+import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
+import { ClientuserComponent } from './components/clientuser/clientuser.component';
 
 
 @NgModule({
@@ -43,6 +44,8 @@ import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark
     ProductCategoryComponent,
     LivingWageBenchmarkComponent,
     SidenavComponent,
+    SupplieruserComponent,
+    ClientuserComponent
   ],
   imports: [
     BrowserModule,
