@@ -441,6 +441,9 @@ background:#202020;
       left: 50%;
     }
   }
-  
+  .kind2{position: relative;
+    top: 2rem;
+    font-family: GothamMedium;
+    font-size: 0.8rem;}
   
   /*  End Toggle Switch  */
