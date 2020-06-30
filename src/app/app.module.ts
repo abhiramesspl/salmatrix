@@ -24,6 +24,9 @@ import { ProductCategoryComponent } from './components/product-category/product-
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
 import { VerificationAndValidationComponent } from './components/verification-and-validation/verification-and-validation.component';
 
+import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
+import { ClientuserComponent } from './components/clientuser/clientuser.component';
+import { AddclientuserComponent } from './components/addclientuser/addclientuser.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { VerificationAndValidationComponent } from './components/verification-an
     LivingWageBenchmarkComponent,
     SidenavComponent,
     VerificationAndValidationComponent,
+    SupplieruserComponent,
+    ClientuserComponent,
+    AddclientuserComponent
   ],
   imports: [
     BrowserModule,
