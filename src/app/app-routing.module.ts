@@ -17,6 +17,7 @@ import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark
 import { VerificationAndValidationComponent } from './components/verification-and-validation/verification-and-validation.component';
 import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
 import { ClientuserComponent } from './components/clientuser/clientuser.component';
+import { ManagematricesComponent } from './components/managematrices/managematrices.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'living-wage-benchmark', component: LivingWageBenchmarkComponent},
   { path: 'verification-validation', component: VerificationAndValidationComponent},
   { path: 'supplieruser', component: SupplieruserComponent},
-  { path: 'clientuser', component: ClientuserComponent}
+  { path: 'clientuser', component: ClientuserComponent},
+  { path: 'allmatrices', component: ManagematricesComponent}
 ];
 
 @NgModule({
