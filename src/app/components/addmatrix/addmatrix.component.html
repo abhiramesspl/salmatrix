@@ -1,7 +1,5 @@
-
-
 <div fxLayout fxLayout.xs="column">
-<app-sidenav></app-sidenav>
+    <app-sidenav></app-sidenav>
     <div fxFlex="85%" class="innerPage">
         <app-header></app-header>
         <mat-horizontal-stepper #stepper>
@@ -76,6 +74,104 @@
 
                     </mat-card-content>
                     <div class="wizardNext">
+                        <button mat-button matStepperNext class="matStepperNext">Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Season Information</ng-template>
+
+                    <mat-card-content>
+                        <mat-header class="info">Season Information</mat-header>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Product</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Varieties or Types grown</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit of Production</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total Annual Production</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Certification and Standards</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Year of Data Collection</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Number Of Production Season </mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                            </div>
+
+                        </div>
+
+                        <mat-header class="info">Season Information</mat-header>
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+
+                                    <mat-label>Select Unit for Definig Season length</mat-label>
+                                    <mat-select name="seasonlengthin">
+                                        <mat-option value="Weeks"> Weeks</mat-option>
+                                        <mat-option value="Months"> Months</mat-option>
+                                    </mat-select>
+
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="4%"></div>
+                            <div fxFlex="48%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>No Of Weeks or Months</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                    </mat-card-content>
+                    <div class="wizardNext">
+                        <button mat-button matStepperPrevious class="matStepperPrevious">Back</button>
                         <button mat-button matStepperNext class="matStepperNext">Next</button>
                     </div>
                 </form>
@@ -184,30 +280,30 @@
                     <mat-card-content>
                         <div fxLayout fxLayout.xs="column" class="loginInput">
 
-                                <div fxFlex="15%">
-                                    <div class="workArea">WorkArea</div>
-                                    <div class="jobCategory">Job Category</div>
-                                </div>
-                                <div fxFlex="26%">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Men</mat-label>
-                                        <input matInput type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="3%"></div>
-                                <div fxFlex="26%">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Women</mat-label>
-                                        <input matInput type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="3%"></div>
-                                <div fxFlex="26%">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Total</mat-label>
-                                        <input matInput type="text" readonly>
-                                    </mat-form-field>
-                                </div>
+                            <div fxFlex="15%">
+                                <div class="workArea">WorkArea</div>
+                                <div class="jobCategory">Job Category</div>
+                            </div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Men</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Women</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
 
 
                         </div>
@@ -240,68 +336,68 @@
                             </div>
 
 
-                    </div>
-
-                    <div fxLayout fxLayout.xs="column" class="loginInput">
-
-                        <div fxFlex="15%">
-                            <div class="workArea">WorkArea</div>
-                            <div class="jobCategory">Job Category</div>
-                        </div>
-                        <div fxFlex="26%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Men</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="26%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Women</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="26%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Total</mat-label>
-                                <input matInput type="text" readonly>
-                            </mat-form-field>
                         </div>
 
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
 
-                </div>
-
-
-                <div fxLayout fxLayout.xs="column" class="loginInput">
-
-                    <div fxFlex="15%">
-                        <div class="jobCategory2">Job Category</div>
-                    </div>
-                    <div fxFlex="26%">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Men</mat-label>
-                            <input matInput type="text">
-                        </mat-form-field>
-                    </div>
-                    <div fxFlex="3%"></div>
-                    <div fxFlex="26%">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Women</mat-label>
-                            <input matInput type="text">
-                        </mat-form-field>
-                    </div>
-                    <div fxFlex="3%"></div>
-                    <div fxFlex="26%">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Total</mat-label>
-                            <input matInput type="text" readonly>
-                        </mat-form-field>
-                    </div>
+                            <div fxFlex="15%">
+                                <div class="workArea">WorkArea</div>
+                                <div class="jobCategory">Job Category</div>
+                            </div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Men</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Women</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
 
 
-            </div>
-                    
+                        </div>
+
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+
+                            <div fxFlex="15%">
+                                <div class="jobCategory2">Job Category</div>
+                            </div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Men</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Women</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="26%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Total</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+
 
                     </mat-card-content>
                     <div class="wizardNext">
@@ -343,175 +439,175 @@
                             </div>
 
 
-                    </div>
-
-                    <div fxLayout fxLayout.xs="column" class="loginInput">
-                        <div fxLayout fxLayout.xs="flex" class="workArea">Season One Wages</div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="17%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Unit</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
                         </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="17%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Amount paid per unit</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxLayout fxLayout.xs="flex" class="workArea">Season One Wages</div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Amount paid per unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average units completed per day</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per day</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per week</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+
+
                         </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="17%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Average units completed per day</mat-label>
-                                <input matInput type="text">
-                            </mat-form-field>
+
+
+
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxLayout fxLayout.xs="flex" class="workArea">Season Two Wages</div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Amount paid per unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average units completed per day</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per day</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per week</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+
+
                         </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="17%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Average hours worked per day</mat-label>
-                                <input matInput type="text" readonly>
-                            </mat-form-field>
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxLayout fxLayout.xs="flex" class="workArea">Season Three Wages</div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Amount paid per unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average units completed per day</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per day</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per week</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+
+
                         </div>
-                        <div fxFlex="3%"></div>
-                        <div fxFlex="17%">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Average hours worked per week</mat-label>
-                                <input matInput type="text" readonly>
-                            </mat-form-field>
+
+
+                        <div fxLayout fxLayout.xs="column" class="loginInput">
+                            <div fxLayout fxLayout.xs="flex" class="workArea">Season Four Wages</div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Amount paid per unit</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average units completed per day</mat-label>
+                                    <input matInput type="text">
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per day</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="3%"></div>
+                            <div fxFlex="17%">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Average hours worked per week</mat-label>
+                                    <input matInput type="text" readonly>
+                                </mat-form-field>
+                            </div>
+
+
                         </div>
-    
-    
-                </div>
-
-
-
-
-<div fxLayout fxLayout.xs="column" class="loginInput">
-    <div fxLayout fxLayout.xs="flex" class="workArea">Season Two Wages</div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Amount paid per unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average units completed per day</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per day</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per week</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-
-
-</div>
-
-<div fxLayout fxLayout.xs="column" class="loginInput">
-    <div fxLayout fxLayout.xs="flex" class="workArea">Season Three Wages</div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Amount paid per unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average units completed per day</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per day</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per week</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-
-
-</div>
-
-
-<div fxLayout fxLayout.xs="column" class="loginInput">
-    <div fxLayout fxLayout.xs="flex" class="workArea">Season Four Wages</div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Amount paid per unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average units completed per day</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per day</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-    <div fxFlex="3%"></div>
-    <div fxFlex="17%">
-        <mat-form-field appearance="outline">
-            <mat-label>Average hours worked per week</mat-label>
-            <input matInput type="text" readonly>
-        </mat-form-field>
-    </div>
-
-
-</div>
 
 
 
@@ -532,75 +628,307 @@
                 <form [formGroup]="fifthFormGroup">
                     <ng-template matStepLabel>In-kind Benefits</ng-template>
                     <mat-card-content>
-                        <div fxLayout fxLayout.xs="column">
-                           
-                        <div class="inkindRow" fxFlex="48%">
-                            <div class="inkind-Title">
-                                Food
-                            </div>
-                            <div class="inkindLabel">
-                                <mat-form-field>
-                                    <mat-label>Workers receive food</mat-label>
-                                    <mat-select>
-                                      <mat-option *ngFor="let food of foods" [value]="food.value">
-                                        {{food.viewValue}}
-                                      </mat-option>
-                                    </mat-select>
-                                  </mat-form-field>
-                            </div>
-                        </div>
-                        <div fxFlex="4%"></div>
-                        <div class="inkindRow" fxFlex="48%">
-                            <div class="inkind-Title">
-                                Transportation
-                            </div>
-                            <div class="inkindLabel">
-                                <mat-form-field>
-                                    <mat-label>Workers receive Transportation</mat-label>
-                                    <mat-select>
-                                      <mat-option *ngFor="let food of foods" [value]="food.value">
-                                        {{food.viewValue}}
-                                      </mat-option>
-                                    </mat-select>
-                                  </mat-form-field>
-                            </div>
-                        </div>
-                    </div>
-                       
-                    <div fxLayout fxLayout.xs="column">
-                        <div class="inkindRow" fxFlex="48%">
-                            <div class="inkind-Title">
-                                Housing
-                            </div>
-                            <div class="inkindLabel">
-                                <mat-form-field>
-                                    <mat-label>Workers receive housing</mat-label>
-                                    <mat-select>
-                                      <mat-option *ngFor="let food of foods" [value]="food.value">
-                                        {{food.viewValue}}
-                                      </mat-option>
-                                    </mat-select>
-                                  </mat-form-field>
-                            </div>
-                        </div>
-                        <div fxFlex="4%"></div>
-                        <div class="inkindRow" fxFlex="48%">
-                            <div class="inkind-Title">
-                                Healthcare
-                            </div>
-                            <div class="inkindLabel">
-                                <mat-form-field>
-                                    <mat-label>Workers receive healthcare</mat-label>
-                                    <mat-select>
-                                      <mat-option *ngFor="let food of foods" [value]="food.value">
-                                        {{food.viewValue}}
-                                      </mat-option>
-                                    </mat-select>
-                                  </mat-form-field>
-                            </div>
-                        </div>
-                    </div>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                        Transportation Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
 
+                            </mat-expansion-panel-header>
+                           
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting transportation</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing transportation per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            transportation</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                        Food Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting food</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing food per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            food</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                        Housing Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting housing</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing housing per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            housing</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                        Healthcare Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                           
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting healthcare</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing healthcare per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            healthcare</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                    Child's care Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                         
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting child's care</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing child's care per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            child's care</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="accordn">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin">
+                                    Children Education Facility
+                                    </mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>No Of Employees getting children education</mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Monthly cost to employer for providing children education per worker
+                                        </mat-label>
+                                        <input matInput type="text" readonly>
+
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxLayout fxLayout.xs="column" class="loginInput">
+                                <div fxFlex="48%">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-label>Workers have the choice to receive cash value instead of
+                                            children education</mat-label>
+                                        <mat-select name="seasonlengthin">
+                                            <mat-option value="Yes"> Yes</mat-option>
+                                            <mat-option value="No"> No</mat-option>
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+                     
 
                     </mat-card-content>
                     <div class="wizardNext">
@@ -611,9 +939,9 @@
             </mat-step>
             <mat-step>
                 <ng-template matStepLabel>In-kind Benefits 2</ng-template>
-                
+
                 <div fxLayout fxLayout.xs="column" class="loginInput">
-                    <div fxFlex="10%" class="kind2">Food</div>
+                    <div fxFlex="10%" class="kind2">housing</div>
                     <div fxFlex="35%">
                         <mat-form-field appearance="outline">
                             <mat-label>Value per worker per month </mat-label>
@@ -621,38 +949,38 @@
                         </mat-form-field>
                     </div>
                     <div fxFlex="4%"></div>
-             
 
-      
+
+
                     <div fxFlex="10%" class="kind2">Transportation</div>
-                <div fxFlex="35%">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Cost per worker per month </mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                </div>
+                    <div fxFlex="35%">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Cost per worker per month </mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
                 </div>
                 <div fxLayout fxLayout.xs="column" class="loginInput">
-                <div fxFlex="10%" class="kind2">Housing</div>
-                <div fxFlex="35%">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Value per worker per month </mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                </div>
-                <div fxFlex="4%"></div>
+                    <div fxFlex="10%" class="kind2">Housing</div>
+                    <div fxFlex="35%">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Value per worker per month </mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="4%"></div>
 
-                <div fxFlex="10%" class="kind2">Healthcare</div>
-                <div fxFlex="35%">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Value per worker per month </mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                </div>
+                    <div fxFlex="10%" class="kind2">Healthcare</div>
+                    <div fxFlex="35%">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Value per worker per month </mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
                 </div>
 
-              
-                
+
+
 
                 <div class="wizardNext">
                     <button mat-button matStepperPrevious class="matStepperPrevious">Back</button>

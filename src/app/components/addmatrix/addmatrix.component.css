@@ -25,3 +25,7 @@
 
     .innerPage .mat-step-header .mat-step-icon-selected, .innerPage .mat-step-header .mat-step-icon-state-done, .innerPage .mat-step-header .mat-step-icon-state-edit
     {    background: #0081e0 !important;}
+
+    .accordn{
+      margin: 0.8rem;
+    }

@@ -49,6 +49,8 @@ export class AddmatrixComponent implements OnInit {
     {value: 'yes-0', viewValue: 'Yes'},
     {value: 'No-1', viewValue: 'No'},
   ];
+
+  transport = false;
   
   panelOpenState = false;
   

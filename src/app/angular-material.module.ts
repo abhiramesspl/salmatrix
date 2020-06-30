@@ -20,6 +20,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
    imports: [
@@ -43,7 +44,8 @@ import {MatDialogModule} from '@angular/material/dialog';
       MatStepperModule,
       MatCheckboxModule,
       MatSlideToggleModule,
-      MatDialogModule
+      MatDialogModule,
+      MatExpansionModule
    ],
    exports: [
       MatButtonModule,
@@ -65,7 +67,8 @@ import {MatDialogModule} from '@angular/material/dialog';
       MatStepperModule,
       MatCheckboxModule,
       MatSlideToggleModule,
-      MatDialogModule
+      MatDialogModule,
+      MatExpansionModule
    ],
    providers: [
       MatDatepickerModule,
