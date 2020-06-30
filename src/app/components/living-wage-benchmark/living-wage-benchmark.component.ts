@@ -25,7 +25,7 @@ export interface UserData {
   }
   
   const ELEMENT_DATA: UserData[] = [
-    {country: 'Country-1', region: 'Region1', rural_urban: 'Rural', benchmark_location: 'EN-UK', methodology: 'EN-UK', locally_endorced: 'EN-UK',year: 'EN-UK',currency: 'EN-UK',gross_lw_local_usd: 'EN-UK',gross_lw_local_currency: 'EN-UK', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {country: 'Country-1', region: 'Region1', rural_urban: 'Rural', benchmark_location: 'Rural Cost', methodology: 'GLWC Full', locally_endorced: 'Yes',year: '2020',currency: 'EURO',gross_lw_local_usd: 'EN-UK',gross_lw_local_currency: 'EN-UK', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
   ];
   
   

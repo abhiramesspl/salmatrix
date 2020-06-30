@@ -2,21 +2,8 @@
 
 
 <div fxLayout fxLayout.xs="column">
-    <div fxFlex="15%" class="sidenavBar">
-        <mat-list role="list">
-            <mat-list-item role="listitem" class="activemenu"><span class="awesome_icon">
-                <i class="fa fa-bar-chart" aria-hidden="true"></i></span>Dashboard</mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-id-card" aria-hidden="true"></i></span>Matrices</mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-file-text" aria-hidden="true"></i></span>Reports</mat-list-item>
-            <mat-list-item role="listitem">
-                <span class="awesome_icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>Configuration</mat-list-item>
-            
-            <mat-list-item role="listitem">
-              <span class="awesome_icon"><i class="fa fa-globe" aria-hidden="true"></i></span>Countries/Region</mat-list-item>
-          </mat-list>
-    </div>
+    <app-sidenav></app-sidenav>
+
     <div fxFlex="85%" class="innerPage">
         <app-header></app-header>
 

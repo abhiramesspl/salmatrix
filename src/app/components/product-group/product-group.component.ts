@@ -19,7 +19,8 @@ export interface UserData {
   }
   
   const ELEMENT_DATA: UserData[] = [
-    {branch: 'EN-UK', category: 'EN-UK', group: 'EN-UK',language: 'EN-UK', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Branch 1', category: 'Category-1', group: 'Group-1',language: 'EN-UK', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Branch 2', category: 'Category-2', group: 'Group-2',language: 'SPANISH', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
    
   
   

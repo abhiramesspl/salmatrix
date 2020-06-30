@@ -14,6 +14,7 @@ import { BranchComponent } from './components/branch/branch.component';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { LivingWageBenchmarkComponent } from './components/living-wage-benchmark/living-wage-benchmark.component';
+import { VerificationAndValidationComponent } from './components/verification-and-validation/verification-and-validation.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'product-category', component: ProductCategoryComponent},
   { path: 'product-group', component: ProductGroupComponent},
   { path: 'living-wage-benchmark', component: LivingWageBenchmarkComponent},
+  { path: 'verification-validation', component: VerificationAndValidationComponent},
 ];
 
 @NgModule({
