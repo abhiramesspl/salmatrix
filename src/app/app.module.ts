@@ -27,6 +27,7 @@ import { VerificationAndValidationComponent } from './components/verification-an
 import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
 import { ClientuserComponent } from './components/clientuser/clientuser.component';
 import { AddclientuserComponent } from './components/addclientuser/addclientuser.component';
+import { ManagematricesComponent } from './components/managematrices/managematrices.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { AddclientuserComponent } from './components/addclientuser/addclientuser
     VerificationAndValidationComponent,
     SupplieruserComponent,
     ClientuserComponent,
-    AddclientuserComponent
+    AddclientuserComponent,
+    ManagematricesComponent
   ],
   imports: [
     BrowserModule,
