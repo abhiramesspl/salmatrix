@@ -8,15 +8,18 @@ export interface UserData {
   finalizeddate: string;
   matrixgenerated: string;
   save: string;
+  facilityname:string;
+  country:string;
+  delete:string;
 }
 
 const ELEMENT_DATA: UserData[] = [
-  { description: 'Matrix 1', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye' },
-  { description: 'Matrix 2', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'No',  save: 'fa fa-eye' },
-  { description: 'Matrix 3', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye' },
-  { description: 'Matrix 4', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye' },
-  { description: 'Matrix 5', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'No',  save: 'fa fa-eye' },
-  { description: 'Matrix 6', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',   save: 'fa fa-eye' },
+  { description: 'Matrix 1', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye', facilityname: 'supply', country:'UK', delete:'fa fa-trash' },
+  { description: 'Matrix 2', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'No',  save: 'fa fa-eye',facilityname: 'supply', country:'UK',delete:'fa fa-trash' },
+  { description: 'Matrix 3', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye',facilityname: 'supply', country:'UK',delete:'fa fa-trash' },
+  { description: 'Matrix 4', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',  save: 'fa fa-eye',facilityname: 'supply', country:'UK',delete:'fa fa-trash' },
+  { description: 'Matrix 5', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'No',  save: 'fa fa-eye',facilityname: 'supply', country:'UK',delete:'fa fa-trash' },
+  { description: 'Matrix 6', createddate: '25-06-2020', finalizeddate: '25-06-2020', matrixgenerated: 'Yes',   save: 'fa fa-eye',facilityname: 'supply', country:'UK',delete:'fa fa-trash' },
 
 ];
 
@@ -30,7 +33,7 @@ export class ManagematricesComponent implements OnInit {
 
   constructor() {}
   
-  displayedColumns: string[] = ['select', 'description', 'createddate', 'finalizeddate', 'matrixgenerated', 'save'];
+  displayedColumns: string[] = ['select', 'description', 'createddate', 'finalizeddate','facilityname','country', 'matrixgenerated', 'save', 'delete'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 
