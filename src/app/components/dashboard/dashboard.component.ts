@@ -5,7 +5,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 export interface UserData {
-  id: string;
+
+  matrix: string;
   name: string;
   mgenerate: string;
   cdate:string;
@@ -31,6 +32,9 @@ const FDATES: string[] = [
 const MGENERATED: string[] = [
   'Yes', 'Yes', 'Yes',  'Yes','No', 'No', 'Yes'
 ];
+const MATRICES: string[] = [
+  'Matrix1', 'Matrix2', 'Matrix3',  'Matrix4','Matrix5', 'Matrix6', 'Matrix7'
+];
 
 
 @Component({
@@ -44,7 +48,7 @@ export class DashboardComponent implements OnInit {
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
   
-  displayedColumns: string[] = ['id', 'name',  'cdate', 'fdate', 'mgenerate'];
+  displayedColumns: string[] = ['matrix', 'cdate', 'fdate', 'name', 'mgenerate'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -83,9 +87,10 @@ function createNewUser(id: number): UserData {
 
   const fdate = FDATES[Math.round(Math.random() * (FDATES.length - 1))];
   const mgenerate = MGENERATED[Math.round(Math.random() * (MGENERATED.length - 1))];
+  const matrix = MATRICES[Math.round(Math.random() * (MATRICES.length - 1))];
 
   return {
-    id: id.toString(),
+    matrix: matrix,
     name: name,
     cdate: cdate,
     mgenerate: mgenerate,
