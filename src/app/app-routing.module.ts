@@ -18,6 +18,7 @@ import { VerificationAndValidationComponent } from './components/verification-an
 import { SupplieruserComponent } from './components/supplieruser/supplieruser.component';
 import { ClientuserComponent } from './components/clientuser/clientuser.component';
 import { ManagematricesComponent } from './components/managematrices/managematrices.component';
+import { ProductSubgroupComponent } from './components/product-subgroup/product-subgroup.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -27,12 +28,13 @@ const routes: Routes = [
   { path: 'rpassword', component: ResetPasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'new-matrix', component: NewMatrixComponent },
-  { path: 'country-region', component: CountryRegionComponent},
+  { path: 'country', component: CountryRegionComponent},
   { path: 'region', component: RegionComponent },
   { path: 'addmatrix', component: AddmatrixComponent},
   { path: 'branch', component: BranchComponent},
   { path: 'product-category', component: ProductCategoryComponent},
   { path: 'product-group', component: ProductGroupComponent},
+  { path: 'product-subgroup', component: ProductSubgroupComponent},
   { path: 'living-wage-benchmark', component: LivingWageBenchmarkComponent},
   { path: 'verification-validation', component: VerificationAndValidationComponent},
   { path: 'supplieruser', component: SupplieruserComponent},

@@ -9,7 +9,9 @@ import {SelectionModel} from '@angular/cdk/collections';
 export interface UserData {
     branch: string;
     category: string;
-    category_spanish: string;
+    group: string;
+    subgroup: string;
+    subgroup_spanish: string;
     created_by: string;
     updated_by: string;
     delete: string;
@@ -18,22 +20,20 @@ export interface UserData {
   }
   
   const ELEMENT_DATA: UserData[] = [
-    {branch: 'Food', category: 'Banana',category_spanish: 'Plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-    {branch: 'Food', category: 'Banana',category_spanish: 'Plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-    {branch: 'Food', category: 'Banana',category_spanish: 'Plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-  
-  
+    {branch: 'Food', category: 'Banana', group: 'New Banana',subgroup: 'New banana advance',subgroup_spanish: 'Nuevo avance del plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', category: 'Banana', group: 'New Banana',subgroup: 'New banana advance',subgroup_spanish: 'Nuevo avance del plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', category: 'Banana', group: 'New Banana',subgroup: 'New banana advance',subgroup_spanish: 'Nuevo avance del plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+   
   
   ];
 
-
 @Component({
-  selector: 'app-product-category',
-  templateUrl: './product-category.component.html',
-  styleUrls: ['./product-category.component.css']
+  selector: 'app-product-subgroup',
+  templateUrl: './product-subgroup.component.html',
+  styleUrls: ['./product-subgroup.component.css']
 })
-export class ProductCategoryComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'branch','category','category_spanish', 'created_by', 'updated_by','delete','save'];
+export class ProductSubgroupComponent implements OnInit {
+  displayedColumns: string[] = ['select','group','subgroup','subgroup_spanish', 'created_by', 'updated_by','delete','save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 

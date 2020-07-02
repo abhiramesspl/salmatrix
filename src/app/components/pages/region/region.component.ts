@@ -7,7 +7,8 @@ import {SelectionModel} from '@angular/cdk/collections';
 
 export interface UserData {
   currency: string;
-  lang: string;
+  region: string;
+  region_spanish: string;
   created:string;
   updated:string;
   delete:string;
@@ -16,16 +17,10 @@ export interface UserData {
 }
 
 const ELEMENT_DATA: UserData[] = [
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
-  {currency: 'AF-DBS', lang: 'Badakhshan', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',country: 'Afghanistan',save: 'fa fa-floppy-o'},
+  {currency: 'Euro',country: 'Spain', region: 'Barcelona', region_spanish: 'Barcelona', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+  {currency: 'Euro',country: 'Spain', region: 'Barcelona', region_spanish: 'Barcelona', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+  {currency: 'Euro',country: 'Spain', region: 'Barcelona', region_spanish: 'Barcelona', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+  {currency: 'Euro',country: 'Spain', region: 'Barcelona', region_spanish: 'Barcelona', created: 'Robin 12-06-2020',updated: 'Robin 25-06-2020',delete:'fa fa-trash',save: 'fa fa-floppy-o'},
 
 ];
 
@@ -39,7 +34,7 @@ export class RegionComponent implements OnInit {
   languages: any= ['EN', 'FR'];
   selected:any = 'EN';
 
-  displayedColumns: string[] = ['select', 'country', 'currency', 'lang','created', 'updated','delete','save'];
+  displayedColumns: string[] = ['select', 'country','region','region_spanish', 'currency', 'created', 'updated','delete','save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 

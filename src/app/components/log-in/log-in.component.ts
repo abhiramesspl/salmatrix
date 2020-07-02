@@ -10,6 +10,8 @@ export class LogInComponent implements OnInit {
   hide = true;
   number1:number=Math.floor(Math.random() * 90 + 10);
   number2:number=Math.floor(Math.random() * 90 + 10);
+  languages: any= ['EN', 'FR'];
+  selected:any = 'EN';
   constructor(
     private router: Router,
     private route: ActivatedRoute

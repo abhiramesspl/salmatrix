@@ -8,6 +8,7 @@ import {SelectionModel} from '@angular/cdk/collections';
 
 export interface UserData {
     branch: string;
+    branch_spanish: string;
     created_by: string;
     updated_by: string;
     delete: string;
@@ -16,9 +17,10 @@ export interface UserData {
   }
   
   const ELEMENT_DATA: UserData[] = [
-    {branch: 'Food', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-    {branch: 'Non Food', created_by: 'Abc', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-    {branch: 'Drinks', created_by: 'Abc', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', branch_spanish: 'comida',created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', branch_spanish: 'comida',created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', branch_spanish: 'comida',created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+
     
   
   
@@ -30,7 +32,7 @@ export interface UserData {
   styleUrls: ['./branch.component.css']
 })  
 export class BranchComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'branch', 'created_by', 'updated_by','delete','save'];
+  displayedColumns: string[] = ['select', 'branch','branch_spanish', 'created_by', 'updated_by','delete','save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 

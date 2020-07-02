@@ -28,6 +28,7 @@ import { SupplieruserComponent } from './components/supplieruser/supplieruser.co
 import { ClientuserComponent } from './components/clientuser/clientuser.component';
 import { AddclientuserComponent } from './components/addclientuser/addclientuser.component';
 import { ManagematricesComponent } from './components/managematrices/managematrices.component';
+import { ProductSubgroupComponent } from './components/product-subgroup/product-subgroup.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { ManagematricesComponent } from './components/managematrices/managematri
     SupplieruserComponent,
     ClientuserComponent,
     AddclientuserComponent,
-    ManagematricesComponent
+    ManagematricesComponent,
+    ProductSubgroupComponent
   ],
   imports: [
     BrowserModule,

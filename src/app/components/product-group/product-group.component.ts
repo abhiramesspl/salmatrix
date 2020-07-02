@@ -10,7 +10,7 @@ export interface UserData {
     branch: string;
     category: string;
     group: string;
-    language: string;
+    group_spanish: string;
     created_by: string;
     updated_by: string;
     delete: string;
@@ -19,8 +19,9 @@ export interface UserData {
   }
   
   const ELEMENT_DATA: UserData[] = [
-    {branch: 'Branch 1', category: 'Category-1', group: 'Group-1',language: 'EN-UK', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
-    {branch: 'Branch 2', category: 'Category-2', group: 'Group-2',language: 'SPANISH', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', category: 'Banana', group: 'New Banana',group_spanish: 'Nuevo plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', category: 'Banana', group: 'New Banana',group_spanish: 'Nuevo plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
+    {branch: 'Food', category: 'Banana', group: 'New Banana',group_spanish: 'Nuevo plátano', created_by: 'ABC', updated_by: "Robin",delete:'fa fa-trash',save: 'fa fa-floppy-o'},
    
   
   
@@ -32,7 +33,7 @@ export interface UserData {
   styleUrls: ['./product-group.component.css']
 })
 export class ProductGroupComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'branch','category','group','language', 'created_by', 'updated_by','delete','save'];
+  displayedColumns: string[] = ['select', 'branch','category','group','group_spanish', 'created_by', 'updated_by','delete','save'];
   dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
 

@@ -60,8 +60,16 @@
                   
                     <!-- Position Column -->
                     <ng-container matColumnDef="branch">
-                      <th mat-header-cell *matHeaderCellDef> Branch </th>
+                      <th mat-header-cell *matHeaderCellDef> Branch In English </th>
                       <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+                    </ng-container>
+                    <!-- <ng-container matColumnDef="branch_french">
+                      <th mat-header-cell *matHeaderCellDef> Branch In French </th>
+                      <td mat-cell *matCellDef="let element"> {{element.branch_french}} </td>
+                    </ng-container> -->
+                    <ng-container matColumnDef="branch_spanish">
+                      <th mat-header-cell *matHeaderCellDef> Branch In Spanish </th>
+                      <td mat-cell *matCellDef="let element"> {{element.branch_spanish}} </td>
                     </ng-container>
                   
                     <!-- Name Column -->
@@ -86,7 +94,8 @@
 
                       <ng-container matColumnDef="save">
                         <th mat-header-cell *matHeaderCellDef> Save</th>
-                        <td mat-cell *matCellDef="let element"> <i class="{{element.save}}"></i> </td>
+                        <td mat-cell *matCellDef="let element" matTooltip="Info about the action"
+                        matTooltipClass="example-tooltip primary"> <i class="{{element.save}}"></i> </td>
                       </ng-container>
                   
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

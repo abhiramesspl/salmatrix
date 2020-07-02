@@ -26,6 +26,8 @@ body{font-family:GothamBook !important;}
 .login-wrapper{width: 100%;
     margin: 0 auto;
     height: 100%;}
+
+
 .loginImage img{     width: 55%;
     display: flex;
     place-content: center;
